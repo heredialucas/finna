@@ -7,7 +7,7 @@ import { motion } from 'framer-motion';
 import { useState } from 'react';
 import logo from '@/public/logo.png';
 import { staggerContainer, fadeIn, slideIn } from '@/animations/animations';
-import { Banknote, ArrowLeftRight } from 'lucide-react';
+import { Banknote, ArrowLeftRight, CreditCard } from 'lucide-react';
 // Eliminar import de getDolarRates y DolarRate
 
 type HeroProps = {
@@ -113,6 +113,15 @@ export const Hero = ({ dictionary, oficial, blue, error }: HeroProps & { oficial
     <div className="flex flex-col gap-3 mt-4">
       <div className="flex items-center gap-3">
         <span className="flex-shrink-0 bg-green-100 dark:bg-green-900 p-2 rounded-full">
+          <CreditCard className="w-5 h-5 text-green-600 dark:text-green-400" />
+        </span>
+        <div>
+          <span className="font-semibold text-gray-800 dark:text-white text-sm sm:text-base">PRÉSTAMOS PERSONALES</span>
+          <span className="block text-xs sm:text-sm text-gray-600 dark:text-gray-300">Cotizá tu préstamo al instante y recibí el dinero en menos de 24 horas.</span>
+        </div>
+      </div>
+      <div className="flex items-center gap-3">
+        <span className="flex-shrink-0 bg-green-100 dark:bg-green-900 p-2 rounded-full">
           <Banknote className="w-5 h-5 text-green-600 dark:text-green-400" />
         </span>
         <div>
@@ -166,11 +175,9 @@ export const Hero = ({ dictionary, oficial, blue, error }: HeroProps & { oficial
               className="text-xl sm:text-2xl md:text-4xl font-bold text-gray-800 dark:text-white mb-4 sm:mb-6"
               variants={fadeIn}
             >
-              {dictionary.web.home.hero.title}
+              Consultá nuestros servicios financieros
             </motion.h1>
-            <motion.p className="text-gray-600 dark:text-gray-300 text-base sm:text-lg md:text-xl mb-4 sm:mb-6" variants={fadeIn}>
-              {dictionary.web.home.hero.subtitle}
-            </motion.p>
+            {/* Elimina el subtítulo de préstamos personales */}
             {/* Servicios que ofrecemos como items destacados */}
             {ServiciosItems}
             <div className="flex justify-center sm:justify-start">
