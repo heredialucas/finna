@@ -2,26 +2,27 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import { Facebook, Instagram, Linkedin, Mail, Phone, ShoppingBag, Shield, CheckCircle } from 'lucide-react';
+import { Facebook, Instagram, Linkedin, Mail, Phone, CreditCard, Shield, CheckCircle } from 'lucide-react';
 import logo from '@/public/logo.png';
 import Link from 'next/link';
 import { useParams } from 'next/navigation';
 import type { Dictionary } from '@repo/internationalization';
 
-// Simple data structure for saved food
-const defaultFoodData = {
-  location: '',
-  date: '',
-  price: 0,
-  originalPrice: 0
+// Simple loan data structure for saving quotes
+const defaultLoanData = {
+  amount: 0,
+  term: 0,
+  rate: 0,
+  monthlyPayment: 0,
+  totalPayment: 0
 };
 
 // Use a fallback if the imported one isn't available yet
-let savedFoodData;
+let savedLoanData;
 try {
-  savedFoodData = require('../(home)/components/hero').savedFoodData || defaultFoodData;
+  savedLoanData = require('../(home)/components/hero').savedLoanData || defaultLoanData;
 } catch (e) {
-  savedFoodData = defaultFoodData;
+  savedLoanData = defaultLoanData;
 }
 
 type FooterProps = {
@@ -32,32 +33,64 @@ export const Footer = ({ dictionary }: FooterProps) => {
   const params = useParams();
   const locale = params.locale as string;
 
-  // Navigation labels with dictionary fallbacks
+  // Determine if we're using English
+  const isEnglish = locale === 'en';
+
+  // Create WhatsApp message with saved loan data if available
+  const getWhatsAppMessage = () => {
+    if (!savedLoanData || savedLoanData.amount === 0) {
+      return isEnglish
+        ? "Hello, I'd like to apply for a loan with Finna"
+        : "Hola, quiero solicitar un préstamo con Finna";
+    }
+
+    return isEnglish
+      ? `Hello, I'd like to apply for a Finna loan of $${savedLoanData.amount} for ${savedLoanData.term} months. My quote shows a monthly payment of $${savedLoanData.monthlyPayment.toFixed(2)}. Could you help me with the process?`
+      : `Hola, quiero solicitar un préstamo con Finna por $${savedLoanData.amount} a ${savedLoanData.term} meses. Mi cotización muestra una cuota mensual de $${savedLoanData.monthlyPayment.toFixed(2)}. ¿Podrían ayudarme con el trámite?`;
+  };
+
+  // Navigation labels
   const navLabels = {
-    navigation: dictionary?.web.footer?.product.title || "Navegación",
-    home: dictionary?.web.header?.home || "Inicio",
-    features: dictionary?.web.footer?.product.features || "Características",
-    pricing: dictionary?.web.footer?.product.pricing || "Precios",
-    about: dictionary?.web.footer?.product.about || "Acerca de",
-    contact: dictionary?.web.footer?.product.contact || "Contacto"
+    navigation: isEnglish ? "Navigation" : "Navegación",
+    home: isEnglish ? "Home" : "Inicio",
+    advantages: isEnglish ? "Advantages" : "Ventajas",
+    process: isEnglish ? "Process" : "Proceso",
+    testimonials: isEnglish ? "Testimonials" : "Testimonios",
+    faq: isEnglish ? "FAQ" : "Preguntas Frecuentes"
   };
 
-  // Features labels with dictionary fallbacks
+  // Features labels
   const featureLabels = {
-    features: dictionary?.web.footer?.product.title || "Características"
+    features: isEnglish ? "Features" : "Características",
+    loans: isEnglish ? "Personal loans" : "Préstamos personales",
+    secure: isEnglish ? "100% secure" : "100% seguro",
+    approval: isEnglish ? "Fast approval" : "Aprobación rápida"
   };
 
-  // Contact labels with dictionary fallbacks
+  // Contact labels
   const contactLabels = {
-    contact: dictionary?.web.footer?.company.title || "Contacto"
+    contact: isEnglish ? "Contact" : "Contacto",
+    apply: isEnglish ? "Apply for a Loan" : "Solicitar Préstamo"
   };
+
+  // Footer labels
+  const footerLabels = {
+    rights: isEnglish ? "All rights reserved" : "Todos los derechos reservados",
+    privacy: isEnglish ? "Privacy Policy" : "Política de Privacidad",
+    terms: isEnglish ? "Terms and Conditions" : "Términos y Condiciones"
+  };
+
+  // Company description
+  const companyDescription = isEnglish
+    ? "We transform access to personal loans with a 100% digital process. Get the financing you need quickly, securely, and hassle-free."
+    : "Transformamos el acceso a préstamos personales con un proceso 100% digital. Obtenga la financiación que necesita de manera rápida, segura y sin complicaciones.";
 
   return (
-    <footer className="relative mt-24 border-t border-[#0d4b3d]/10 dark:border-[#0d4b3d]/30 bg-white dark:bg-gray-900 overflow-hidden">
+    <footer className="relative mt-24 border-t border-green-100 dark:border-green-900 bg-white dark:bg-gray-900 overflow-hidden">
       {/* Decorative elements */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-[#0d4b3d]/5 dark:bg-[#0d4b3d]/5 rounded-full blur-3xl"></div>
-        <div className="absolute top-1/2 right-1/4 w-72 h-72 bg-[#0d4b3d]/5 dark:bg-[#0d4b3d]/5 rounded-full blur-2xl"></div>
+        <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-green-500/5 dark:bg-green-500/5 rounded-full blur-3xl"></div>
+        <div className="absolute top-1/2 right-1/4 w-72 h-72 bg-green-400/5 dark:bg-green-400/5 rounded-full blur-2xl"></div>
       </div>
 
       <div className="container mx-auto px-4">
@@ -71,26 +104,25 @@ export const Footer = ({ dictionary }: FooterProps) => {
               transition={{ duration: 0.5 }}
               className="flex gap-2 items-center mb-6"
             >
-              <div className="relative flex items-center">
-                <Image
-                  src={logo}
-                  alt="LupaPyme"
-                  width={180}
-                  height={60}
-                  className="h-14 w-auto"
-                />
-              </div>
+              <Image
+                src={logo}
+                alt="Finna - Préstamos Personales"
+                width={60}
+                height={60}
+                className="h-14 w-auto"
+              />
+              <span className="text-3xl font-bold text-green-600 dark:text-green-400">Finna</span>
             </motion.div>
 
             <p className="leading-relaxed max-w-sm text-gray-600 dark:text-gray-300">
-              {dictionary?.web.footer?.companyDescription || "LupaPyme is the platform that helps you understand your customers and boost your business. In-depth metrics, customer retention, and total control of your company."}
+              {companyDescription}
             </p>
-            <div className="flex gap-4 mt-6">
+            {/* <div className="flex gap-4 mt-6">
               <a
                 href="https://www.facebook.com/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-500 hover:text-[#0d4b3d] dark:text-gray-400 dark:hover:text-[#0d4b3d]/90 transition-colors"
+                className="text-gray-500 hover:text-green-600 dark:text-gray-400 dark:hover:text-green-400 transition-colors"
               >
                 <Facebook />
               </a>
@@ -98,7 +130,7 @@ export const Footer = ({ dictionary }: FooterProps) => {
                 href="https://www.instagram.com/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-500 hover:text-[#0d4b3d] dark:text-gray-400 dark:hover:text-[#0d4b3d]/90 transition-colors"
+                className="text-gray-500 hover:text-green-600 dark:text-gray-400 dark:hover:text-green-400 transition-colors"
               >
                 <Instagram />
               </a>
@@ -106,11 +138,11 @@ export const Footer = ({ dictionary }: FooterProps) => {
                 href="https://www.linkedin.com/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-500 hover:text-[#0d4b3d] dark:text-gray-400 dark:hover:text-[#0d4b3d]/90 transition-colors"
+                className="text-gray-500 hover:text-green-600 dark:text-gray-400 dark:hover:text-green-400 transition-colors"
               >
                 <Linkedin />
               </a>
-            </div>
+            </div> */}
           </div>
 
           {/* Quick Links */}
@@ -121,42 +153,42 @@ export const Footer = ({ dictionary }: FooterProps) => {
             <ul className="space-y-3 text-center md:text-left">
               <li>
                 <Link
-                  href={`/${locale}`}
-                  className="text-gray-600 dark:text-gray-300 hover:text-[#0d4b3d] dark:hover:text-[#0d4b3d]/90 transition-colors"
+                  href={`/${locale}#inicio`}
+                  className="text-gray-600 dark:text-gray-300 hover:text-green-600 dark:hover:text-green-400 transition-colors"
                 >
                   {navLabels.home}
                 </Link>
               </li>
               <li>
                 <Link
-                  href={`/${locale}#features`}
-                  className="text-gray-600 dark:text-gray-300 hover:text-[#0d4b3d] dark:hover:text-[#0d4b3d]/90 transition-colors"
+                  href={`/${locale}#ventajas`}
+                  className="text-gray-600 dark:text-gray-300 hover:text-green-600 dark:hover:text-green-400 transition-colors"
                 >
-                  {navLabels.features}
+                  {navLabels.advantages}
                 </Link>
               </li>
               <li>
                 <Link
-                  href={`/${locale}/pricing`}
-                  className="text-gray-600 dark:text-gray-300 hover:text-[#0d4b3d] dark:hover:text-[#0d4b3d]/90 transition-colors"
+                  href={`/${locale}#proceso`}
+                  className="text-gray-600 dark:text-gray-300 hover:text-green-600 dark:hover:text-green-400 transition-colors"
                 >
-                  {navLabels.pricing}
+                  {navLabels.process}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href={`/${locale}#testimonios`}
+                  className="text-gray-600 dark:text-gray-300 hover:text-green-600 dark:hover:text-green-400 transition-colors"
+                >
+                  {navLabels.testimonials}
                 </Link>
               </li>
               <li>
                 <Link
                   href={`/${locale}#faq`}
-                  className="text-gray-600 dark:text-gray-300 hover:text-[#0d4b3d] dark:hover:text-[#0d4b3d]/90 transition-colors"
+                  className="text-gray-600 dark:text-gray-300 hover:text-green-600 dark:hover:text-green-400 transition-colors"
                 >
-                  {navLabels.about}
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href={`/${locale}/contact`}
-                  className="text-gray-600 dark:text-gray-300 hover:text-[#0d4b3d] dark:hover:text-[#0d4b3d]/90 transition-colors"
-                >
-                  {navLabels.contact}
+                  {navLabels.faq}
                 </Link>
               </li>
             </ul>
@@ -169,16 +201,16 @@ export const Footer = ({ dictionary }: FooterProps) => {
             </h3>
             <ul className="space-y-3">
               <li className="flex items-center gap-3 justify-center md:justify-start text-gray-600 dark:text-gray-300">
-                <ShoppingBag className="w-4 h-4 text-[#0d4b3d]" />
-                <span>{dictionary?.web.footer?.menuCreation || "Creación de Menús Digitales"}</span>
+                <CreditCard className="w-4 h-4 text-green-500" />
+                <span>{featureLabels.loans}</span>
               </li>
               <li className="flex items-center gap-3 justify-center md:justify-start text-gray-600 dark:text-gray-300">
-                <Shield className="w-4 h-4 text-[#0d4b3d]" />
-                <span>{dictionary?.web.footer?.mobileFirst || "Diseño Mobile-First"}</span>
+                <Shield className="w-4 h-4 text-green-500" />
+                <span>{featureLabels.secure}</span>
               </li>
               <li className="flex items-center gap-3 justify-center md:justify-start text-gray-600 dark:text-gray-300">
-                <CheckCircle className="w-4 h-4 text-[#0d4b3d]" />
-                <span>{dictionary?.web.footer?.analytics || "Análisis e Insights"}</span>
+                <CheckCircle className="w-4 h-4 text-green-500" />
+                <span>{featureLabels.approval}</span>
               </li>
             </ul>
           </div>
@@ -190,55 +222,60 @@ export const Footer = ({ dictionary }: FooterProps) => {
             </h3>
             <ul className="space-y-3">
               <li className="flex items-center gap-3 justify-center md:justify-start">
-                <Mail className="w-4 h-4 text-[#0d4b3d]" />
+                <Mail className="w-4 h-4 text-green-500" />
                 <a
-                  href="mailto:info@lupapyme.com"
-                  className="text-gray-600 dark:text-gray-300 hover:text-[#0d4b3d] dark:hover:text-[#0d4b3d]/90 transition-colors"
+                  href="mailto:info@finna.com.ar"
+                  className="text-gray-600 dark:text-gray-300 hover:text-green-600 dark:hover:text-green-400 transition-colors"
                 >
-                  info@lupapyme.com
+                  info@finna.com.ar
                 </a>
               </li>
               <li className="flex items-center gap-3 justify-center md:justify-start">
-                <Phone className="w-4 h-4 text-[#0d4b3d]" />
+                <Phone className="w-4 h-4 text-green-500" />
                 <a
-                  href="tel:+34900123456"
-                  className="text-gray-600 dark:text-gray-300 hover:text-[#0d4b3d] dark:hover:text-[#0d4b3d]/90 transition-colors"
+                  href="https://wa.me/5493816437968"
+                  target="_blank"
+                  className="text-gray-600 dark:text-gray-300 hover:text-green-600 dark:hover:text-green-400 transition-colors"
                 >
-                  +34 900 123 456
+                  +54 9 3541 28-6481
                 </a>
               </li>
               <li className="mt-4">
                 <Link
-                  href={`/${locale}/sign-in`}
-                  className="bg-[#0d4b3d] hover:bg-[#0d4b3d]/90 text-white px-4 py-2 rounded-lg transition-colors inline-block"
+                  href={`https://wa.me/5493816437968?text=${encodeURIComponent(getWhatsAppMessage())}`}
+                  target="_blank"
+                  className="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg transition-colors inline-block"
                 >
-                  {dictionary?.web.footer?.getStarted || "Comenzar"}
+                  {contactLabels.apply}
                 </Link>
               </li>
             </ul>
           </div>
         </div>
 
-        {/* App Stores */}
-        <div className="flex flex-col md:flex-row items-center justify-center gap-4 border-t border-[#0d4b3d]/10 py-8">
-        </div>
+        {/* Divider */}
+        <div className="border-t border-green-100 dark:border-green-900"></div>
 
-        {/* Copyright and Legal */}
-        <div className="border-t border-[#0d4b3d]/10 py-8 text-center md:flex md:justify-between text-sm text-gray-500 dark:text-gray-400">
-          <div>© {new Date().getFullYear()} LupaPyme. {dictionary?.web.footer?.rights || "Todos los derechos reservados"}</div>
-          <div className="flex flex-wrap justify-center md:justify-end gap-4 mt-4 md:mt-0">
-            <Link
-              href={`/${locale}/privacy`}
-              className="hover:text-[#0d4b3d] dark:hover:text-[#0d4b3d]/90 transition-colors"
+        {/* Bottom footer */}
+        <div className="py-6 flex flex-col md:flex-row justify-between items-center gap-6 text-sm text-gray-500 dark:text-gray-400">
+          <div className="text-center">
+            © {new Date().getFullYear()} Finna. {footerLabels.rights}
+          </div>
+          <div className="flex flex-wrap justify-center gap-4 md:gap-6">
+            <motion.a
+              href="#"
+              className="hover:text-green-600 dark:hover:text-green-400 transition-colors"
+              whileHover={{ scale: 1.05 }}
             >
-              {dictionary?.web.footer?.legal.privacy || "Política de Privacidad"}
-            </Link>
-            <Link
-              href={`/${locale}/terms`}
-              className="hover:text-[#0d4b3d] dark:hover:text-[#0d4b3d]/90 transition-colors"
+              {footerLabels.privacy}
+            </motion.a>
+            <motion.a
+              href="#"
+              className="hover:text-green-600 dark:hover:text-green-400 transition-colors"
+              whileHover={{ scale: 1.05 }}
             >
-              {dictionary?.web.footer?.legal.terms || "Términos y Condiciones"}
-            </Link>
+              {footerLabels.terms}
+            </motion.a>
           </div>
         </div>
       </div>

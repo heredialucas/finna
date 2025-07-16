@@ -12,15 +12,6 @@ import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { staggerContainer, fadeIn } from '../lib/animations';
 
-type Testimonial = {
-  title: string;
-  description: string;
-  author: {
-    name: string;
-    location: string;
-  };
-};
-
 type TestimonialsProps = {
   dictionary: Dictionary;
 };
@@ -28,47 +19,6 @@ type TestimonialsProps = {
 export const Testimonials = ({ dictionary }: TestimonialsProps) => {
   const [api, setApi] = useState<CarouselApi>();
   const [current, setCurrent] = useState(0);
-
-  // Sample testimonials to use if dictionary doesn't have them
-  const sampleTestimonials = [
-    {
-      title: "¡Mis ventas han aumentado un 20%!",
-      description: "Desde que uso LupaPyme, entiendo mucho mejor a mis clientes. He podido crear campañas de marketing personalizadas que han aumentado mis ventas y la fidelidad de mis clientes.",
-      author: {
-        name: "Ana Pérez",
-        location: "Emprendedora"
-      }
-    },
-    {
-      title: "Ahora tomo decisiones basadas en datos",
-      description: "LupaPyme me ha dado la visibilidad que necesitaba sobre mi negocio. Ahora puedo tomar decisiones estratégicas basadas en datos reales, no en intuiciones.",
-      author: {
-        name: "Juan López",
-        location: "Dueño de Pyme"
-      }
-    },
-    {
-      title: "La mejor herramienta para retener clientes",
-      description: "Con la segmentación de clientes de LupaPyme, he podido identificar a mis clientes más valiosos y crear programas de fidelización que funcionan. ¡Mi tasa de retención ha mejorado muchísimo!",
-      author: {
-        name: "Sofía Gómez",
-        location: "Gerente de Marketing"
-      }
-    },
-    {
-      title: "Fácil de usar y muy potente",
-      description: "Me sorprendió lo fácil que es de usar LupaPyme. En pocos minutos ya tenía mis dashboards configurados y empecé a ver información súper valiosa. ¡La recomiendo!",
-      author: {
-        name: "Carlos Fernández",
-        location: "Consultor de Negocios"
-      }
-    }
-  ];
-
-  // Get testimonials from dictionary if available, otherwise use samples
-  const testimonials: Testimonial[] = dictionary.web.home.testimonials?.items?.length > 0
-    ? dictionary.web.home.testimonials.items
-    : sampleTestimonials;
 
   useEffect(() => {
     if (!api) {
@@ -95,7 +45,7 @@ export const Testimonials = ({ dictionary }: TestimonialsProps) => {
       viewport={{ once: true }}
       variants={staggerContainer}
       className="w-full py-20 lg:py-40 relative bg-green-50/50 dark:bg-green-900/10"
-      id="business"
+      id="testimonios"
     >
       {/* Decorative elements */}
       <div className="absolute inset-0 pointer-events-none">
@@ -107,11 +57,11 @@ export const Testimonials = ({ dictionary }: TestimonialsProps) => {
       <div className="container mx-auto px-4">
         <motion.div variants={fadeIn} className="flex flex-col gap-6 mb-12">
           <h2 className="text-center font-bold text-3xl md:text-4xl text-gray-800 dark:text-white var(--font-nunito)">
-            {dictionary.web.home.testimonials?.title || "Lo que dicen nuestros usuarios"}
+            {dictionary.web.home.testimonials.title}
           </h2>
           <div className="w-20 h-1 bg-gradient-to-r from-green-400 to-green-600 rounded-full mx-auto mb-2"></div>
           <p className="text-muted-foreground text-center max-w-2xl mx-auto text-lg var(--font-nunito)">
-            {dictionary.web.home.testimonials?.description || "Descubre cómo LupaPyme está ayudando a negocios como el tuyo a crecer."}
+            {dictionary.web.home.testimonials.description}
           </p>
         </motion.div>
 
@@ -124,7 +74,7 @@ export const Testimonials = ({ dictionary }: TestimonialsProps) => {
         >
           <Carousel setApi={setApi} className="w-full">
             <CarouselContent>
-              {testimonials.map((item: Testimonial, index: number) => (
+              {dictionary.web.home.testimonials.items.map((item, index) => (
                 <CarouselItem className="md:basis-1/2 lg:basis-1/2 p-2" key={index}>
                   <div className="flex h-full flex-col justify-between rounded-xl bg-white dark:bg-gray-800 p-6 shadow-lg border border-green-200 dark:border-green-800 hover:border-green-400 dark:hover:border-green-600 transition-all duration-300">
                     <div className="flex justify-between items-start mb-4">

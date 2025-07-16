@@ -16,6 +16,7 @@ import { usePathname } from 'next/navigation';
 
 import type { Dictionary } from '@repo/internationalization';
 import Image from 'next/image';
+import { LanguageSwitcher } from './language-switcher';
 import logo from '@/public/logo.png';
 
 type HeaderProps = {
@@ -28,45 +29,38 @@ export const Header = ({ dictionary, locale }: HeaderProps) => {
 
   const navigationItems = [
     {
-      title: dictionary.web.header.features || 'Features',
-      href: `/${locale}#features`,
+      title: dictionary.web.header.home || 'Home',
+      href: `/${locale}`,
     },
-    // {
-    //   title: dictionary.web.header.pricing || 'Pricing',
-    //   href: `/${locale}/pricing`,
-    // },
     {
-      title: dictionary.web.header.about || 'About',
+      title: dictionary.web.home.features.title || 'Ventajas',
+      href: `/${locale}#ventajas`,
+    },
+    {
+      title: dictionary.web.home.stats.title || 'Proceso',
+      href: `/${locale}#proceso`,
+    },
+    {
+      title: dictionary.web.home.faq.title || 'Preguntas',
       href: `/${locale}#faq`,
-    },
-    {
-      title: dictionary.web.header.contact || 'Contact',
-      href: `/${locale}/contact`,
     }
   ];
-
-  // Ensure first letter is capitalized for all navigation items
-  const capitalizeFirstLetter = (string: string): string => {
-    if (!string) return '';
-    return string.charAt(0).toUpperCase() + string.slice(1).toLowerCase();
-  };
 
   const [isOpen, setOpen] = useState(false);
   return (
     <header className="sticky top-0 left-0 z-40 w-full border-b bg-background">
-      <div className="container relative mx-auto flex items-center justify-between min-h-20 px-4">
+      <div className="container relative mx-auto flex items-center justify-between min-h-16 px-4">
         {/* Logo on the left */}
         <div className="flex items-center">
-          <Link href={`/${locale}`} className="flex items-center">
-            <div className="relative flex items-center">
-              <Image
-                src={logo}
-                alt="LupaPyme"
-                width={180}
-                height={60}
-                className="w-auto h-16"
-              />
-            </div>
+          <Link href={`/${locale}`} className="flex items-center gap-2">
+            <Image
+              src={logo}
+              alt="Finna - Préstamos Personales"
+              width={100}
+              height={40}
+              className="w-auto h-10"
+            />
+            <span className="text-xl font-bold text-green-600">Finna</span>
           </Link>
         </div>
 
@@ -77,8 +71,8 @@ export const Header = ({ dictionary, locale }: HeaderProps) => {
               {navigationItems.map((item) => (
                 <NavigationMenuItem key={item.title}>
                   <NavigationMenuLink asChild>
-                    <Button variant="ghost" asChild className="font-nunito font-bold hover:bg-gray-100 dark:hover:bg-gray-800 px-2">
-                      <Link href={item.href}>{capitalizeFirstLetter(item.title)}</Link>
+                    <Button variant="ghost" asChild className="font-nunito font-bold hover:text-green-600 px-2">
+                      <Link href={item.href}>{item.title}</Link>
                     </Button>
                   </NavigationMenuLink>
                 </NavigationMenuItem>
@@ -89,12 +83,21 @@ export const Header = ({ dictionary, locale }: HeaderProps) => {
 
         {/* Right side buttons */}
         <div className="flex items-center gap-2">
-          <ModeToggle />
-          <Button className="bg-[#0d4b3d] hover:bg-[#0d4b3d]/90 text-white font-nunito font-bold px-3 py-1 h-9" asChild>
-            <Link href={`${env.NEXT_PUBLIC_APP_URL}/${locale}/sign-in`}>
-              {dictionary.web.header.getStarted || 'Get Started'}
+          <div className="hidden md:flex items-center gap-2">
+            <LanguageSwitcher />
+            <ModeToggle />
+            <Button variant="outline" asChild className="hidden md:inline font-nunito font-bold border-green-600 text-green-600 hover:bg-green-50 px-3 py-1 h-9">
+              {env.NEXT_PUBLIC_APP_URL && (
+                <Link href={`${env.NEXT_PUBLIC_APP_URL}/sign-in`}>
+                  {dictionary.web.header.signIn}
+                </Link>
+              )}
+            </Button>
+          </div>
+          <Button className="bg-green-600 hover:bg-green-700 text-white font-nunito font-bold px-3 py-1 h-9" asChild>
+            <Link href="https://wa.me/5493816437968?text=Hola, quiero solicitar un préstamo con Finna" target="_blank">
+              {dictionary.web.global.primaryCta}
             </Link>
-
           </Button>
 
           {/* Mobile menu button */}
@@ -114,36 +117,22 @@ export const Header = ({ dictionary, locale }: HeaderProps) => {
                     className="flex items-center justify-between font-nunito font-bold px-4"
                     onClick={() => setOpen(false)}
                   >
-                    <span className="text-lg">{capitalizeFirstLetter(item.title)}</span>
+                    <span className="text-lg">{item.title}</span>
                     <MoveRight className="h-4 w-4 stroke-1 text-muted-foreground" />
                   </Link>
                 </div>
               </div>
             ))}
             <div className="px-4">
-              <ModeToggle />
-              {env.NEXT_PUBLIC_APP_URL && (
-                <Link
-                  href={`${env.NEXT_PUBLIC_APP_URL}/${locale}/sign-in`}
-                  className="flex items-center justify-between font-nunito font-bold text-[#0d4b3d]"
-                  onClick={() => setOpen(false)}
-                >
-                  <span className="text-lg">{dictionary.web.header.getStarted || 'Get Started'}</span>
-                  <MoveRight className="h-4 w-4 stroke-1 text-[#0d4b3d]" />
-                </Link>
-              )}
-            </div>
-            <div className="px-4">
-              {env.NEXT_PUBLIC_APP_URL && (
-                <Link
-                  href={`${env.NEXT_PUBLIC_APP_URL}/${locale}/sign-in`}
-                  className="flex items-center justify-between font-nunito font-bold text-[#0d4b3d]"
-                  onClick={() => setOpen(false)}
-                >
-                  <span className="text-lg">{dictionary.web.header.logIn || 'Log In'}</span>
-                  <MoveRight className="h-4 w-4 stroke-1 text-[#0d4b3d]" />
-                </Link>
-              )}
+              <Link
+                href="https://wa.me/5493816437968?text=Hola, quiero solicitar un préstamo con Finna"
+                target="_blank"
+                className="flex items-center justify-between font-nunito font-bold text-green-600"
+                onClick={() => setOpen(false)}
+              >
+                <span className="text-lg">{dictionary.web.global.primaryCta}</span>
+                <MoveRight className="h-4 w-4 stroke-1 text-green-600" />
+              </Link>
             </div>
           </div>
         )}

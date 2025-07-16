@@ -1,225 +1,103 @@
 {
   "app": {
     "admin": {
-      "title": "Repartito - Admin Panel",
+      "title": "Admin Dashboard",
       "navigation": {
         "dashboard": "Dashboard",
-        "analytics": "Analytics",
-        "clients": "Clients",
-        "clientsMobile": "Clients",
-        "orders": "Orders",
-        "ordersMobile": "Orders",
-        "inventory": "Inventory",
-        "inventoryMobile": "Inventory",
-        "products": "Products",
-        "productsMobile": "Products",
-        "payments": "Payments",
-        "paymentsMobile": "Payments",
-        "account": "My Account",
-        "accountMobile": "Account",
-        "settings": "Settings",
         "users": "Users",
+        "settings": "Settings",
         "logout": "Logout",
-        "loggingOut": "Logging out...",
-        "table": "Table",
-        "tableMobile": "Table"
+        "loggingOut": "Logging out..."
       },
-      "menu": {
-        "title": "Menu Management",
-        "categories": {
-          "title": "Categories",
-          "new": "New Category",
-          "noCategories": "No categories found. Create your first category!",
-          "edit": "Edit",
-          "delete": "Delete",
-          "deleteConfirmation": "Are you sure you want to delete this category?",
-          "form": {
-            "editTitle": "Edit Category",
-            "createTitle": "Create New Category",
-            "name": "Name",
-            "description": "Description",
-            "active": "Active",
-            "cancel": "Cancel",
-            "create": "Create",
-            "update": "Update",
-            "saving": "Saving..."
-          }
+      "products": {
+        "title": "Product Dashboard",
+        "newProduct": "New Product",
+        "noProducts": "No products found. Create your first product!",
+        "technologies": "Technologies",
+        "edit": "Edit",
+        "delete": "Delete",
+        "deleteConfirmation": "Are you sure you want to delete this product?",
+        "status": {
+          "published": "Published",
+          "draft": "Draft",
+          "archived": "Archived"
         },
-        "dishes": {
-          "title": "Dishes",
-          "new": "New Dish",
-          "noDishes": "No dishes found. Create your first dish!",
-          "edit": "Edit",
-          "delete": "Delete",
-          "deleteConfirmation": "Are you sure you want to delete this dish?",
-          "status": {
-            "active": "Active",
-            "inactive": "Inactive"
-          },
-          "form": {
-            "editTitle": "Edit Dish",
-            "createTitle": "Create New Dish",
-            "name": "Name",
-            "description": "Description",
-            "price": "Price",
-            "category": "Category",
-            "status": "Status",
-            "cancel": "Cancel",
-            "create": "Create",
-            "update": "Update",
-            "saving": "Saving..."
-          }
-        },
-        "dailySpecials": {
-          "title": "Daily Specials",
-          "new": "New Daily Special",
-          "noSpecials": "No daily specials found.",
-          "edit": "Edit",
-          "delete": "Delete",
-          "deleteConfirmation": "Are you sure you want to delete this daily special?",
-          "form": {
-            "editTitle": "Edit Daily Special",
-            "createTitle": "Create New Daily Special",
-            "date": "Date",
-            "dish": "Dish",
-            "active": "Active",
-            "cancel": "Cancel",
-            "create": "Create",
-            "update": "Update",
-            "saving": "Saving..."
-          }
+        "form": {
+          "editTitle": "Edit Product",
+          "createTitle": "Create New Product",
+          "productTitle": "Title",
+          "status": "Status",
+          "size": "Size",
+          "statusDescription": "Status Description",
+          "description": "Description",
+          "detailedDescription": "Detailed Description",
+          "productImages": "Product Images",
+          "addImages": "Click to add more images",
+          "imageRequirements": "PNG, JPG, GIF up to 5MB",
+          "features": "Features",
+          "addFeature": "Add Feature",
+          "technologies": "Technologies", 
+          "addTechnology": "Add Technology",
+          "cancel": "Cancel",
+          "create": "Create",
+          "update": "Update",
+          "saving": "Saving..."
         }
+      }
+    },
+    "cash_flow": {
+      "config": {
+        "title": "Create your Projection",
+        "initialBalance": "Initial Balance",
+        "totalIncome": "Total Income",
+        "totalExpenses": "Total Expenses",
+        "startDate": "Start Date",
+        "endDate": "End Date"
       },
-      "clients": {
-        "title": "Client Management",
-        "subtitle": "Client Behavior Analysis",
-        "description": "Visualize and manage client categories based on their purchasing behavior",
-        "categories": {
-          "title": "Client Categories",
-          "behaviorTitle": "By Purchase Behavior",
-          "spendingTitle": "By Spending Level",
-          "new": "New Client",
-          "newDescription": "Only one purchase made",
-          "possibleActive": "Possible Active",
-          "possibleActiveDescription": "Purchased again within a month of their first purchase",
-          "possibleInactive": "Possible Inactive",
-          "possibleInactiveDescription": "Did not purchase again within a month of their first purchase",
-          "active": "Active Client",
-          "activeDescription": "+2 purchases in the last 2 months",
-          "inactive": "Inactive Client",
-          "inactiveDescription": "No purchases for more than 2 months",
-          "recovered": "Recovered Client",
-          "recoveredDescription": "Was inactive for more than 2 months and purchased again",
-          "lost": "Lost Client",
-          "lostDescription": "Customers who have not made a purchase in more than 4 months.",
-          "tracking": "Tracking",
-          "trackingDescription": "Customers with a single purchase, between 1 and 4 weeks old.",
-          "premium": "Premium (A)",
-          "premiumDescription": "Customers with the highest purchase volume.",
-          "standard": "Standard (B)",
-          "standardDescription": "Customers with regular purchase volume.",
-          "basic": "Basic (C)",
-          "basicDescription": "Customers with low purchase volume.",
-          "spendingCalculationNote": "Calculation based on purchases in the last month.",
-          "kgRange": "KG Range"
-        },
-        "stats": {
-          "totalClients": "Total Clients",
-          "averageSpending": "Average Spending",
-          "repeatRate": "Repeat Rate",
-          "averageOrders": "Average Orders"
-        },
-        "actions": {
-          "sendWhatsApp": "Send WhatsApp",
-          "viewProfile": "View Profile",
-          "viewOrders": "View Orders"
-        },
-        "empty": {
-          "title": "No clients",
-          "description": "You don't have registered clients with orders yet"
-        }
+      "report_title": "Cash Flow Report",
+      "calendar": {
+        "addTransaction": "Add Transaction",
+        "editTransaction": "Edit Transaction",
+        "description": "Concept",
+        "type": "Type",
+        "income": "Income",
+        "expense": "Expense",
+        "amount": "Amount",
+        "date": "Date",
+        "save": "Save",
+        "cancel": "Cancel",
+        "delete": "Delete",
+        "confirmDelete": "Are you sure you want to delete this transaction?",
+        "projectedBalance": "Projected Balance",
+        "dailyIncome": "Daily Income",
+        "dailyExpenses": "Daily Expenses",
+        "edit": "Edit"
       },
-      "layout": {
-        "title": "Repartito Administration Panel",
-        "description": "Access Repartito's administrative tools to manage your business efficiently."
+      "reset": {
+        "button": "Reset Form",
+        "success": "Form and projections reset successfully"
       },
-      "dashboard": {
-        "title": "Repartito Administration Panel",
-        "description": "Access Repartito's administrative tools to manage your business efficiently."
+      "clear_events": {
+        "button": "Delete Income/Expenses",
+        "success": "Income and expenses deleted successfully"
       },
-      "pageTitles": {
-        "title": "Repartito - Admin Panel",
-        "description": "Access Repartito's administrative tools to manage your business efficiently."
+      "final_balance": "Final Balance",
+      "help": {
+        "title": "Help",
+        "intro": "How to use the Cash Flow application",
+        "step1": "Enter your initial balance, total income and expenses",
+        "step2": "Select start and end dates for the projection",
+        "step3": "Add income or expense events by clicking on the calendar",
+        "step4": "The projection is calculated automatically when any data changes",
+        "step5": "Green color indicates positive balance, red indicates negative"
       },
-      "permissions": {
-        "groups": {
-          "users": "Users",
-          "account": "Account",
-          "clients": "Clients",
-          "inventory": "Inventory",
-          "orders": "Orders",
-          "products": "Products",
-          "sellers": "Sellers",
-          "payments": "Payments"
-        },
-        "labels": {
-          "users:view": "View users",
-          "users:create": "Create users",
-          "users:edit": "Edit users",
-          "users:delete": "Delete users",
-          "account:view_own": "View own account",
-          "account:edit_own": "Edit own account",
-          "account:change_password": "Change password",
-          "account:manage_users": "Manage users",
-          "clients:view": "View clients",
-          "clients:create": "Create clients",
-          "clients:edit": "Edit clients",
-          "clients:delete": "Delete clients",
-          "clients:view_account_balance": "View account balance",
-          "clients:manage_account_balance": "Manage account balance",
-          "inventory:view": "View inventory",
-          "inventory:manage": "Manage inventory",
-          "orders:view": "View orders",
-          "orders:create": "Create orders",
-          "orders:edit": "Edit orders",
-          "orders:cancel": "Cancel orders",
-          "products:view": "View products",
-          "products:create": "Create products",
-          "products:edit": "Edit products",
-          "products:delete": "Delete products",
-          "sellers:view": "View sellers",
-          "payments:view": "View payments",
-          "payments:manage": "Manage payments"
-        },
-        "descriptions": {
-          "users:view": "Allows viewing the list of other system users.",
-          "users:create": "Allows creating new users (sellers or administrators).",
-          "users:edit": "Allows editing the information and permissions of other users.",
-          "users:delete": "Allows deleting users from the system.",
-          "account:view_own": "Basic permission to view one's own account information.",
-          "account:edit_own": "Allows the user to edit their own name and email.",
-          "account:change_password": "Allows the user to change their own password.",
-          "account:manage_users": "High-level permission to create, edit, and delete other users.",
-          "clients:view": "Allows viewing the list of assigned clients.",
-          "clients:create": "Allows registering new clients in the system.",
-          "clients:edit": "Allows modifying the information of existing clients.",
-          "clients:delete": "Allows deleting clients from the system.",
-          "clients:view_account_balance": "Allows viewing the account balance (debt/credit) of clients.",
-          "clients:manage_account_balance": "Allows adjusting the account balance of clients (e.g., registering a payment).",
-          "inventory:view": "Allows viewing the available product stock.",
-          "inventory:manage": "Allows updating the stock quantities of products.",
-          "orders:view": "Allows viewing the order history.",
-          "orders:create": "Allows creating new orders for clients.",
-          "orders:edit": "Allows modifying existing orders.",
-          "orders:cancel": "Allows canceling orders.",
-          "products:view": "Allows viewing the list of products and their prices.",
-          "products:create": "Allows adding new products to the catalog.",
-          "products:edit": "Allows modifying existing products.",
-          "products:delete": "Allows deleting products from the catalog.",
-          "sellers:view": "Allows viewing information about other sellers.",
-          "payments:view": "Allows viewing registered payments.",
-          "payments:manage": "Allows registering or modifying payments."
-        }
+      "export": {
+        "button": "Export to PDF",
+        "success": "Report exported as"
+      },
+      "errors": {
+        "missing_fields": "Please complete the date and initial balance fields before exporting.",
+        "pdf_generation": "An error occurred while generating the PDF. Please try again."
       }
     },
     "client": {
@@ -247,12 +125,12 @@
     },
     "auth": {
       "signIn": {
-        "title": "Sign in",
+        "title": "Access Your Finna Dashboard",
+        "description": "Enter your credentials to manage your business finances",
         "email": "Email",
         "password": "Password",
-        "button": "Sign in",
-        "signing": "Signing in...",
-        "goToSignUp": "Don't have an account? Sign up",
+        "button": "Access Dashboard",
+        "signing": "Accessing Dashboard...",
         "errors": {
           "emptyFields": "Please complete all fields",
           "invalidCredentials": "Error signing in",
@@ -260,15 +138,17 @@
         }
       },
       "signUp": {
-        "title": "Create account",
+        "title": "Create Your Finna Account",
+        "description": "Start managing your business finances today",
         "firstName": "First Name",
         "lastName": "Last Name",
         "email": "Email",
         "password": "Password",
         "confirmPassword": "Confirm Password",
+        "companyName": "Company/Business Name",
+        "companyNamePlaceholder": "Your Company or Business Name",
         "button": "Create account",
         "creating": "Creating account...",
-        "goToSignIn": "Already have an account? Sign in",
         "errors": {
           "emptyFields": "Please complete all fields",
           "passwordsDoNotMatch": "Passwords do not match",
@@ -277,304 +157,289 @@
         }
       },
       "layout": {
-        "title": "Barfer Administration Panel",
-        "description": "Access Barfer's administrative tools to manage your business efficiently."
+        "title": "Manage your business financial flow with Finna",
+        "description": "The tool to create, verify and control the cash flow of your company or venture in a simple and effective way."
       }
     },
-    "tablePage": {
-      "title": "Orders Table",
-      "description": "A list of all the orders."
+    "errors": {
+      "title": "Error"
+    },
+    "success": {
+      "title": "Success"
+    },
+    "help": {
+      "title": "Help"
     }
   },
   "web": {
     "global": {
-      "primaryCta": "Contact us",
-      "secondaryCta": "Get started now"
-    },
-    "menu": {
-      "title": "Our Services",
-      "todaySpecial": "Featured Service",
-      "featuredDish": "Featured Service",
-      "specialDescription": "Discover our featured service of the month, designed to boost your business.",
-      "todayOnly": "This month only",
-      "comingSoon": "Coming soon... We're preparing our services.",
-      "address": "Address",
-      "phone": "Phone",
-      "hours": "Hours",
-      "contact": "Contact",
-      "searchPlaceholder": "Search services...",
-      "allCategories": "All categories",
-      "specialsOnly": "Featured only",
-      "filters": "Filters",
-      "noResults": "No services found with the applied filters.",
-      "clearFilters": "Clear filters",
-      "currency": "$",
-      "closed": "Closed",
-      "categories": {
-        "noDishes": "No services available in this category"
-      },
-      "dish": {
-        "outOfStock": "Not available",
-        "available": "Available"
-      },
-      "footer": {
-        "poweredBy": "Platform created with",
-        "businessInfo": "Business information"
-      }
+      "primaryCta": "Apply for a loan",
+      "secondaryCta": "Get a quote now"
     },
     "header": {
       "home": "Home",
-      "features": "Features",
-      "pricing": "Pricing",
-      "about": "About Us",
+      "projects": "Projects",
+      "services": "Services",
+      "servicesDescription": "Our services for software development",
+      "process": "Process",
+      "processDescription": "How we work with our clients",
+      "product": {
+        "title": "Product",
+        "description": "Custom software development requires expertise and proven methodologies.",
+        "pricing": "Pricing"
+      },
+      "blog": "Blog",
       "contact": "Contact",
-      "logIn": "Log In",
-      "getStarted": "Get Started",
-      "navigation": "Navigation"
+      "signIn": "Sign in",
+      "signUp": "Register"
     },
     "home": {
       "meta": {
-        "title": "Repartito - Business Metrics for Client Retention",
-        "description": "Repartito gives you the necessary tools to analyze your business metrics, understand your clients' behavior and make strategic decisions to increase retention and sales."
+        "title": "Finna - Personal Loans",
+        "description": "Fast and easy personal loans. Get a quote in minutes and receive the money in less than 24 hours."
       },
       "hero": {
-        "title": "The platform that boosts your business",
-        "paragraph": "Repartito gives you the necessary tools to analyze your business metrics, understand your clients' behavior and make strategic decisions to increase retention and sales.",
-        "primaryCta": "Get Started",
-        "secondaryCta": "Contact Sales"
+        "announcement": "New digital loan platform!",
+        "title": "Personal loans tailored to your needs",
+        "subtitle": "Get an instant quote and receive the money in less than 24 hours.",
+        "cta": "Apply now!",
+        "calculator": {
+          "title": "Calculate your loan",
+          "amount": "Loan amount",
+          "term": "Term (months)",
+          "rate": "Annual interest rate",
+          "monthlyPayment": "Monthly payment",
+          "totalPayment": "Total payment",
+          "calculate": "Calculate"
+        }
+      },
+      "cases": {
+        "title": "Why choose Finna?",
+        "subtitle": "Thousands of people have already trusted us to solve their financial needs.",
+        "quote": "Personal loans for every need",
+        "projectsTitle": "Loan types",
+        "projectStatus": {
+          "finished": "Available",
+          "inProgress": "Promotion"
+        }
       },
       "features": {
-        "title": "Why Choose Repartito",
-        "paragraph": "From detailed analytics to communication tools, Repartito has everything you need to take your business to the next level."
-      },
-      "metrics": {
-        "title": "Understand your business in depth",
-        "description": "Key metrics to understand your business's health"
+        "title": "Finna Advantages",
+        "description": "We offer quick and accessible financial solutions to meet your needs",
+        "items": [
+          {
+            "title": "100% Digital Process",
+            "description": "Apply for your loan from any device, without paperwork or branch visits."
+          },
+          {
+            "title": "Fast Approval",
+            "description": "Evaluation and response in minutes, with money disbursement in less than 24 hours."
+          },
+          {
+            "title": "No Guarantees",
+            "description": "You don't need to present guarantors or properties as collateral to access your loan."
+          },
+          {
+            "title": "Competitive Rates",
+            "description": "We offer transparent and competitive financial conditions tailored to your profile."
+          },
+          {
+            "title": "Flexible Amounts",
+            "description": "Request from small loans to larger amounts according to your particular needs."
+          },
+          {
+            "title": "Personalized Attention",
+            "description": "We have specialized advisors to help you every step of the way."
+          }
+        ]
       },
       "stats": {
-        "title": "How Repartito works",
-        "description": "Follow these simple steps to start understanding your customers and boosting your business.",
+        "title": "Our Process",
+        "description": "Get your loan in 3 simple steps",
         "process": [
           {
-            "title": "Connect your data",
-            "description": "Connect your sales system or upload your data securely."
+            "title": "Quote",
+            "description": "Fill out the form with your information and the amount you need to receive a personalized quote."
           },
           {
-            "title": "Analyze your metrics",
-            "description": "Visualize your most important KPIs in an intuitive dashboard."
+            "title": "Verification",
+            "description": "Our system will analyze your application and immediately inform you about the approval of your loan."
           },
           {
-            "title": "Segment your customers",
-            "description": "Classify your customers and understand their purchasing behavior."
-          },
-          {
-            "title": "Take action",
-            "description": "Use the information to create marketing and loyalty campaigns."
+            "title": "Disbursement",
+            "description": "Once approved, you'll receive the money in less than 24 hours."
           }
         ]
       },
       "testimonials": {
-        "title": "What our clients say",
-        "description": "Discover how Repartito is helping businesses like yours to grow.",
-        "clients": [
+        "title": "Customer Experiences",
+        "description": "What people who have already obtained loans with Finna say",
+        "items": [
           {
-            "name": "Laura G.",
-            "role": "Owner of a local store",
-            "description": "Since I started using Repartito, I understand my customers much better. I have been able to create personalized marketing campaigns that have increased my sales and customer loyalty."
+            "title": "Saved me in an emergency",
+            "description": "I needed money urgently to fix my car and in less than a day I already had the money in my account. A great solution when you're in a hurry. The process was super simple.",
+            "author": {
+              "name": "Martin Gomez",
+              "location": "Buenos Aires"
+            }
           },
           {
-            "name": "Carlos M.",
-            "role": "E-commerce Manager",
-            "description": "Repartito has given me the visibility I needed over my business. Now I can make strategic decisions based on real data, not intuition."
+            "title": "Straightforward loan",
+            "description": "After several banks gave me the runaround with thousands of requirements, Finna approved a loan for me quickly and with better conditions. Zero bureaucracy, all digital. Really amazing.",
+            "author": {
+              "name": "Carolina Rios",
+              "location": "Cordoba"
+            }
           },
           {
-            "name": "Ana R.",
-            "role": "Marketing Director",
-            "description": "With Repartito's customer segmentation, I have been able to identify my most valuable customers and create loyalty programs that work. My retention rate has improved a lot!"
+            "title": "Excellent interest rate",
+            "description": "I compared everywhere and Finna offered me the best rate. I requested the loan to remodel my apartment and the entire process was very transparent. I ended up paying exactly what they told me from the beginning.",
+            "author": {
+              "name": "Gabriel Mendez",
+              "location": "Mendoza"
+            }
           },
           {
-            "name": "Pedro S.",
-            "role": "Entrepreneur",
-            "description": "I was surprised how easy it is to use Repartito. In a few minutes I had my dashboards configured and I began to see super valuable information. I recommend it!"
+            "title": "Personalized attention",
+            "description": "What I liked most was the attention via WhatsApp. I had questions about the process and they answered me right away. No waiting on the phone for hours like with traditional banks. Highly recommended!",
+            "author": {
+              "name": "Laura Fernandez",
+              "location": "Rosario"
+            }
+          }
+        ]
+      },
+      "faq": {
+        "title": "Frequently Asked Questions",
+        "description": "We resolve your doubts about personal loans and the application process.",
+        "cta": "Still have questions? Contact us",
+        "needMore": "Need more information?",
+        "contactDescription": "If you didn't find the answer to your question, our team of financial advisors is ready to help you.",
+        "items": [
+          {
+            "question": "What are the requirements to apply for a loan?",
+            "answer": "To apply for a loan with Finna you need: to be of legal age, have an ID or legal residence, and have an income."
+          },
+          {
+            "question": "How long does it take to receive the money?",
+            "answer": "Once your application is approved, you will receive the money within a maximum of 24 business hours, although most of our clients receive it in just a few hours."
+          },
+          {
+            "question": "What interest rates do you handle?",
+            "answer": "Our interest rates vary according to the applicant's profile and the required amount. You can find out your personalized rate using our online calculator without any commitment."
+          },
+          {
+            "question": "Can I pay off my loan early?",
+            "answer": "Absolutely! With Finna you can pay off your loan before the established term without any penalty. By doing so, you will only pay the interest corresponding to the time you used the money."
           }
         ]
       },
       "cta": {
-        "title": "Ready to get started?",
-        "paragraph": "Start using Repartito today and discover everything you can achieve.",
-        "primaryCta": "Get Started",
-        "secondaryCta": "Contact Sales"
-      },
-      "faq": {
-        "title": "Frequently Asked Questions",
-        "description": "Have questions? We have answers. If you can't find what you are looking for, please contact us.",
-        "items": [
-          {
-            "question": "What is Repartito?",
-            "answer": "Repartito is a platform that helps small and medium-sized businesses analyze their business data to make better decisions, with a focus on client retention."
-          },
-          {
-            "question": "How does it work?",
-            "answer": "You connect your sales system (or upload your data) and Repartito automatically processes it to generate key metrics and reports."
-          },
-          {
-            "question": "What kind of businesses can use it?",
-            "answer": "No, Repartito is a 100% online platform. You just need an internet connection to access your dashboards."
-          },
-          {
-            "question": "Is it secure?",
-            "answer": "Yes, we take security very seriously. All your data is encrypted and protected with the highest security standards."
-          },
-          {
-            "question": "What is the price?",
-            "answer": "We have different plans that adapt to the needs of your business. You can check them on our pricing page."
-          }
-        ],
-        "contact": {
-          "title": "Still have questions?",
-          "description": "Don't worry. Contact our team and we will be happy to help you.",
-          "cta": "Contact Us"
-        },
-        "newsletter": {
-          "title": "Get insights for your business",
-          "description": "Subscribe to our newsletter to receive tips, case studies, and updates on how to leverage your data to grow.",
-          "placeholder": "Your email address",
-          "subscribe": "Subscribe",
-          "subscribing": "Subscribing...",
-          "success": "Thank you for subscribing!",
-          "error": "Something went wrong. Please try again.",
-          "validation": "Please enter a valid email",
-          "privacy": "We respect your privacy. No spam."
+        "title": "Get the money you need today",
+        "description": "Join thousands of people who have already solved their financial needs with Finna. 100% digital process, immediate response and the best terms in the market.",
+        "calendly": {
+          "title": "Talk to an advisor",
+          "subtitle": "15 minutes · Free",
+          "benefits": [
+            "Resolve all your doubts",
+            "Receive personalized advice",
+            "Learn about special options for your case"
+          ]
         }
       },
-      "cases": {
-        "title": "Success Stories",
-        "description": "Discover how Repartito has helped businesses like yours to grow.",
-        "quote": "Data is the new oil. Repartito helps you refine it.",
-        "author": "Data Scientist",
-        "authorRole": "at Repartito"
+      "newsletter": {
+        "title": "Stay Updated",
+        "description": "Subscribe to receive the latest news about digital product development and MVPs",
+        "placeholder": "Your email address",
+        "subscribe": "Subscribe",
+        "subscribing": "Subscribing...",
+        "success": "Thank you for subscribing! You'll receive our next update.",
+        "error": "Something went wrong. Please try again.",
+        "validation": "Please enter a valid email address.",
+        "privacy": "We promise not to send spam, only relevant content"
       }
     },
     "pricing": {
-      "meta": {
-        "title": "Pricing - Repartito",
-        "description": "Find the perfect plan for your business. Start for free."
-      },
-      "title": "Flexible plans for businesses of all sizes",
-      "paragraph": "Choose the plan that best suits your needs and start growing with Repartito.",
-      "primaryCta": "Get Started",
-      "plans": {
-        "monthly": "Monthly",
-        "annually": "Annually",
-        "save": "Save",
-        "free": {
-          "title": "Free",
-          "price": "Free",
-          "frequency": "forever",
-          "description": "For businesses that are just starting.",
-          "features": [
-            "Up to 100 clients",
-            "Basic analytics",
-            "Email support"
-          ]
+      "title": "Prices that make sense for your practice",
+      "description": "Choose the plan that fits your accounting practice's needs",
+      "monthly": "month",
+      "popular": "POPULAR",
+      "tryIt": "Try it out",
+      "contactUs": "Contact us",
+      "plans": [
+        {
+          "name": "Startup",
+          "description": "Perfect for small accounting practices just getting started",
+          "price": "40"
         },
-        "pro": {
-          "title": "Pro",
-          "price": "$49",
-          "frequency": "/month",
-          "description": "For growing businesses.",
-          "features": [
-            "Up to 1,000 clients",
-            "Advanced analytics",
-            "Client segmentation",
-            "Priority support"
-          ]
+        {
+          "name": "Growth",
+          "description": "Ideal for established firms looking to expand their services",
+          "price": "80"
         },
-        "enterprise": {
-          "title": "Enterprise",
-          "price": "Custom",
-          "frequency": "",
-          "description": "For large businesses and corporations.",
-          "features": [
-            "Unlimited clients",
-            "Custom integrations",
-            "Dedicated account manager",
-            "24/7 support"
-          ]
+        {
+          "name": "Enterprise",
+          "description": "Complete solution for large accounting firms with complex needs",
+          "price": "160"
         }
+      ],
+      "features": {
+        "sso": "Single Sign-On (SSO)",
+        "ai": "AI Assistant",
+        "version": "Version Control",
+        "members": "{count} team members"
       }
     },
     "blog": {
       "meta": {
-        "title": "Sustainable Food Blog",
-        "description": "Tips, recipes, and articles on how to reduce food waste and promote more sustainable consumption."
+        "title": "Tax Insights Blog",
+        "description": "Expert insights, tips and updates on tax management for accountants and financial professionals."
       }
     },
     "contact": {
       "meta": {
-        "title": "Contact - Repartito",
-        "description": "Get in touch with us. We are here to help you."
-      },
-      "title": "Get in Touch",
-      "paragraph": "Have questions or want more information? Send us a message and we will get back to you as soon as possible.",
-      "form": {
-        "name": "Name",
-        "email": "Email",
-        "message": "Message",
-        "send": "Send message",
-        "sending": "Sending...",
-        "success": "Message sent successfully!",
-        "error": "There was an error sending the message.",
-        "success_message": "Message sent successfully!",
-        "error_message": "There was an error sending the message.",
-        "name_placeholder": "Your name",
-        "email_placeholder": "Your email",
-        "message_placeholder": "Your message",
-        "send_button": "Send Message",
-        "subtitleInfo": "Get in touch with us",
-        "title": "Send us a message",
-        "subtitle": "We'll get back to you as soon as possible"
+        "title": "Contact Us",
+        "description": "Contact our team to discuss how AppWise can help transform your ideas into successful digital solutions and grow your business."
       },
       "hero": {
+        "title": "We're here to help",
+        "description": "Our team is available to help you every step of the way with your development project.",
+        "cta": "Send message",
         "benefits": [
           {
-            "title": "Direct Support",
-            "description": "Talk to a real person who can help you with your needs."
+            "title": "Quick response",
+            "description": "Our experts will help you take your idea to the next level with custom digital solutions."
           },
           {
-            "title": "Fast Response",
-            "description": "We'll get back to you in less than 24 hours."
+            "title": "Ongoing support",
+            "description": "We offer technical assistance and continuous improvements to keep your application running perfectly."
           },
           {
-            "title": "Personalized Solutions",
-            "description": "We'll help you find the right solution for your business."
+            "title": "Custom solutions",
+            "description": "Every project is unique, which is why we develop tailored solutions that adapt to your specific needs."
           }
-        ]
+        ],
+        "form": {
+          "title": "Let's talk about your project",
+          "firstName": "First name",
+          "lastName": "Last name",
+          "date": "Preferred date",
+          "resume": "Attach relevant files",
+          "cta": "Submit"
+        }
       },
-      "company": {
-        "title": "Company",
-        "about": "About Us",
-        "blog": "Blog",
-        "careers": "Careers"
-      },
-      "legal": {
-        "title": "Legal",
-        "terms": "Terms of Service",
-        "privacy": "Privacy Policy"
-      },
-      "copy": "All rights reserved.",
-      "companyDescription": "Repartito is the platform that helps you understand your customers and boost your business. In-depth metrics, customer retention, and total control of your company.",
-      "menuCreation": "Digital Menu Creation",
-      "mobileFirst": "Mobile-First Design",
-      "analytics": "Analytics and Insights",
-      "getStarted": "Get Started",
-      "rights": "All rights reserved"
-    },
-    "landing": {
-      "title": "Repartito"
+      "form": {
+        "title": "Contact us",
+        "subtitle": "We respond in 24 hours",
+        "subtitleInfo": "Transforming ideas into digital solutions",
+        "name_placeholder": "Full name",
+        "email_placeholder": "Email address",
+        "message_placeholder": "Tell us about your project",
+        "sending": "Sending...",
+        "send_button": "Send message",
+        "success_message": "Your message has been sent successfully!",
+        "error_message": "Failed to send message. Please try again later."
+      }
     }
-  },
-  "error": {
-    "go_back": "Go back"
   }
 }

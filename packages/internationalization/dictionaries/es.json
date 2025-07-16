@@ -1,448 +1,103 @@
 {
   "app": {
     "admin": {
-      "title": "Repartito - Panel de Administración",
+      "title": "Panel de Administración",
       "navigation": {
-        "dashboard": "Dashboard",
-        "analytics": "Analíticas",
-        "clients": "Clientes",
-        "clientsMobile": "Clientes",
-        "orders": "Pedidos",
-        "ordersMobile": "Pedidos",
-        "inventory": "Inventario",
-        "inventoryMobile": "Inventario",
-        "products": "Productos",
-        "productsMobile": "Productos",
-        "payments": "Pagos",
-        "paymentsMobile": "Pagos",
-        "account": "Mi Cuenta",
-        "accountMobile": "Cuenta",
-        "settings": "Configuración",
+        "dashboard": "Inicio",
         "users": "Usuarios",
+        "settings": "Configuración",
         "logout": "Cerrar Sesión",
-        "loggingOut": "Cerrando sesión...",
-        "table": "Tabla",
-        "tableMobile": "Tabla",
-        "sellers": "Vendedores",
-        "sellersMobile": "Vendedores"
-      },
-      "menu": {
-        "title": "Gestión de Menú",
-        "categories": {
-          "title": "Categorías",
-          "new": "Nueva Categoría",
-          "noCategories": "No se encontraron categorías. ¡Crea tu primera categoría!",
-          "edit": "Editar",
-          "delete": "Eliminar",
-          "deleteConfirmation": "¿Estás seguro de que deseas eliminar esta categoría?",
-          "form": {
-            "editTitle": "Editar Categoría",
-            "createTitle": "Crear Nueva Categoría",
-            "name": "Nombre",
-            "description": "Descripción",
-            "active": "Activa",
-            "cancel": "Cancelar",
-            "create": "Crear",
-            "update": "Actualizar",
-            "saving": "Guardando..."
-          }
-        },
-        "dishes": {
-          "title": "Platos",
-          "new": "Nuevo Plato",
-          "noDishes": "No se encontraron platos. ¡Crea tu primer plato!",
-          "edit": "Editar",
-          "delete": "Eliminar",
-          "deleteConfirmation": "¿Estás seguro de que deseas eliminar este plato?",
-          "status": {
-            "active": "Activo",
-            "inactive": "Inactivo"
-          },
-          "form": {
-            "editTitle": "Editar Plato",
-            "createTitle": "Crear Nuevo Plato",
-            "name": "Nombre",
-            "description": "Descripción",
-            "price": "Precio",
-            "category": "Categoría",
-            "status": "Estado",
-            "cancel": "Cancelar",
-            "create": "Crear",
-            "update": "Actualizar",
-            "saving": "Guardando..."
-          }
-        },
-        "dailySpecials": {
-          "title": "Platos del Día",
-          "new": "Nuevo Plato del Día",
-          "noSpecials": "No se encontraron platos del día.",
-          "edit": "Editar",
-          "delete": "Eliminar",
-          "deleteConfirmation": "¿Estás seguro de que deseas eliminar este plato del día?",
-          "form": {
-            "editTitle": "Editar Plato del Día",
-            "createTitle": "Crear Nuevo Plato del Día",
-            "date": "Fecha",
-            "dish": "Plato",
-            "active": "Activo",
-            "cancel": "Cancelar",
-            "create": "Crear",
-            "update": "Actualizar",
-            "saving": "Guardando..."
-          }
-        }
-      },
-      "clients": {
-        "title": "Gestión de Clientes",
-        "subtitle": "Análisis de Comportamiento de Clientes",
-        "description": "Visualiza y gestiona las categorías de clientes basadas en su comportamiento de compra",
-        "form": {
-          "createTitle": "Crear Nuevo Cliente",
-          "editTitle": "Editar Cliente",
-          "name": "Nombre",
-          "lastName": "Apellido",
-          "email": "Email",
-          "phone": "Teléfono",
-          "address": "Dirección"
-        },
-        "table": {
-          "actions": "Acciones"
-        },
-        "detail": {
-          "title": "Detalles del Cliente"
-        },
-        "categories": {
-          "title": "Categorías de Clientes",
-          "behaviorTitle": "Por Comportamiento de Compra",
-          "spendingTitle": "Por Nivel de Gasto",
-          "new": "Cliente Nuevo",
-          "newDescription": "Solo una compra realizada",
-          "possibleActive": "Posible Activo",
-          "possibleActiveDescription": "Volvió a comprar al mes de su primera compra",
-          "possibleInactive": "Posible Inactivo",
-          "possibleInactiveDescription": "No volvió a comprar al mes de su primera compra",
-          "active": "Cliente Activo",
-          "activeDescription": "+2 compras en los últimos 2 meses",
-          "inactive": "Cliente Inactivo",
-          "inactiveDescription": "No compra hace más de 2 meses",
-          "recovered": "Cliente Recuperado",
-          "recoveredDescription": "Inactivo por más de 2 meses y volvió a comprar",
-          "lost": "Cliente Perdido",
-          "lostDescription": "Clientes que no han realizado compras en más de 4 meses.",
-          "tracking": "En Seguimiento",
-          "trackingDescription": "Clientes con una sola compra, entre 1 y 4 semanas de antigüedad.",
-          "premium": "Premium (A)",
-          "premiumDescription": "Clientes con mayor volumen de compra.",
-          "standard": "Estándar (B)",
-          "standardDescription": "Clientes con volumen de compra regular.",
-          "basic": "Básico (C)",
-          "basicDescription": "Clientes con bajo volumen de compra.",
-          "spendingCalculationNote": "Cálculo por compras del último mes.",
-          "kgRange": "Rango KG"
-        },
-        "stats": {
-          "totalClients": "Clientes Totales",
-          "averageSpending": "Gasto Promedio",
-          "repeatRate": "Tasa de Repetición",
-          "averageOrders": "Pedidos Promedio"
-        },
-        "actions": {
-          "sendWhatsApp": "Enviar WhatsApp",
-          "viewProfile": "Ver Perfil",
-          "viewOrders": "Ver Pedidos"
-        },
-        "empty": {
-          "title": "No hay clientes",
-          "description": "Aún no tienes clientes registrados con pedidos"
-        }
+        "loggingOut": "Cerrando sesión..."
       },
       "products": {
-        "title": "Gestión de Productos",
-        "subtitle": "Catálogo de Productos",
-        "description": "Gestiona todos los productos de tu inventario.",
+        "title": "Panel de Productos",
         "newProduct": "Nuevo Producto",
-        "noProducts": "No hay productos registrados.",
-        "table": {
-          "name": "Nombre",
-          "price": "Precio",
-          "stock": "Stock",
-          "actions": "Acciones",
-          "copyId": "Copiar ID de producto",
-          "edit": "Editar Producto",
-          "viewDetails": "Ver detalles del producto"
-        },
-        "form": {
-          "createTitle": "Crear Nuevo Producto",
-          "editTitle": "Editar Producto",
-          "name": "Nombre",
-          "description": "Descripción",
-          "price": "Precio",
-          "stock": "Stock",
-          "cancel": "Cancelar",
-          "create": "Crear Producto",
-          "update": "Actualizar Producto"
-        }
-      },
-      "inventory": {
-        "title": "Mi Inventario",
-        "subtitle": "Gestión de Stock de Vendedor",
-        "description": "Gestiona el stock de los productos que vendes.",
-        "table": {
-          "product": "Producto",
-          "sku": "SKU",
-          "price": "Precio",
-          "stock": "Mi Stock",
-          "actions": "Acciones",
-          "editStock": "Editar Stock"
-        },
-        "form": {
-          "title": "Actualizar Stock",
-          "product": "Producto",
-          "currentStock": "Stock Actual",
-          "newStock": "Nuevo Stock",
-          "cancel": "Cancelar",
-          "update": "Actualizar Stock"
-        }
-      },
-      "orders": {
-        "title": "Gestión de Pedidos",
-        "subtitle": "Historial de Pedidos",
-        "description": "Revisa y gestiona todos los pedidos.",
-        "newOrder": "Nuevo Pedido",
-        "table": {
-          "id": "ID Pedido",
-          "client": "Cliente",
-          "date": "Fecha",
-          "total": "Monto Total",
-          "status": "Estado",
-          "actions": "Acciones",
-          "viewDetails": "Ver Detalles"
-        },
-        "form": {
-          "title": "Crear Nuevo Pedido",
-          "selectClient": "Seleccionar un cliente",
-          "searchClient": "Buscar cliente...",
-          "noClientFound": "Ningún cliente encontrado.",
-          "searchProduct": "Buscar producto...",
-          "noProductFound": "Ningún producto encontrado.",
-          "addProduct": "Añadir Producto",
-          "orderItems": "Ítems del Pedido",
-          "product": "Producto",
-          "quantity": "Cantidad",
-          "price": "Precio",
-          "subtotal": "Subtotal",
-          "total": "Total",
-          "createOrder": "Crear Pedido",
-          "creatingOrder": "Creando pedido..."
-        }
-      },
-      "users": {
-        "title": "Gestión de Usuarios",
-        "subtitle": "Usuarios del Sistema",
-        "description": "Gestiona los usuarios y sus permisos",
-        "newUser": "Nuevo Usuario",
-        "noUsers": "No hay usuarios registrados",
+        "noProducts": "No se encontraron productos. ¡Crea tu primer producto!",
+        "technologies": "Tecnologías",
+        "edit": "Editar",
+        "delete": "Eliminar",
+        "deleteConfirmation": "¿Estás seguro de que deseas eliminar este producto?",
         "status": {
-          "active": "Activo",
-          "inactive": "Inactivo"
-        },
-        "roles": {
-          "admin": "Administrador",
-          "user": "Usuario"
-        },
-        "actions": {
-          "edit": "Editar",
-          "delete": "Eliminar",
-          "confirmDelete": "¿Estás seguro de que deseas eliminar este usuario?"
+          "published": "Publicado",
+          "draft": "Borrador",
+          "archived": "Archivado"
         },
         "form": {
-          "createTitle": "Crear Nuevo Usuario",
-          "editTitle": "Editar Usuario",
-          "name": "Nombre",
-          "lastName": "Apellido",
-          "email": "Email",
-          "password": "Contraseña",
-          "role": "Rol",
+          "editTitle": "Editar Producto",
+          "createTitle": "Crear Nuevo Producto",
+          "productTitle": "Título",
+          "status": "Estado",
+          "size": "Tamaño",
+          "statusDescription": "Descripción del Estado",
+          "description": "Descripción",
+          "detailedDescription": "Descripción Detallada",
+          "productImages": "Imágenes del Producto",
+          "addImages": "Haz clic para añadir más imágenes",
+          "imageRequirements": "PNG, JPG, GIF hasta 5MB",
+          "features": "Características",
+          "addFeature": "Añadir Característica",
+          "technologies": "Tecnologías", 
+          "addTechnology": "Añadir Tecnología",
           "cancel": "Cancelar",
-          "create": "Crear Usuario",
-          "update": "Actualizar Usuario",
-          "creating": "Creando...",
-          "updating": "Actualizando...",
-          "errors": {
-            "emptyFields": "Todos los campos son requeridos",
-            "invalidEmail": "Email inválido",
-            "passwordTooShort": "La contraseña debe tener al menos 6 caracteres",
-            "emailExists": "Ya existe un usuario con este email",
-            "createFailed": "Error al crear el usuario",
-            "updateFailed": "Error al actualizar el usuario"
-          },
-          "success": {
-            "userCreated": "Usuario creado exitosamente",
-            "userUpdated": "Usuario actualizado exitosamente"
-          }
-        },
-        "permissions": {
-          "groups": {
-            "users": "Usuarios",
-            "account": "Cuenta",
-            "clients": "Clientes",
-            "inventory": "Inventario",
-            "orders": "Pedidos",
-            "products": "Productos",
-            "sellers": "Vendedores",
-            "payments": "Pagos"
-          },
-          "labels": {
-            "users:view": "Ver usuarios",
-            "users:create": "Crear usuarios",
-            "users:edit": "Editar usuarios",
-            "users:delete": "Eliminar usuarios",
-            "account:view_own": "Ver cuenta propia",
-            "account:edit_own": "Editar cuenta propia",
-            "account:change_password": "Cambiar contraseña",
-            "account:manage_users": "Gestionar usuarios",
-            "clients:view": "Ver clientes",
-            "clients:create": "Crear clientes",
-            "clients:edit": "Editar clientes",
-            "clients:delete": "Eliminar clientes",
-            "clients:view_account_balance": "Ver saldo de cuenta",
-            "clients:manage_account_balance": "Gestionar saldo de cuenta",
-            "inventory:view": "Ver inventario",
-            "inventory:manage": "Gestionar inventario",
-            "orders:view": "Ver pedidos",
-            "orders:create": "Crear pedidos",
-            "orders:edit": "Editar pedidos",
-            "orders:cancel": "Cancelar pedidos",
-            "products:view": "Ver productos",
-            "products:create": "Crear productos",
-            "products:edit": "Editar productos",
-            "products:delete": "Eliminar productos",
-            "sellers:view": "Ver vendedores",
-            "payments:view": "Ver pagos",
-            "payments:manage": "Gestionar pagos"
-          },
-          "descriptions": {
-            "users:view": "Permite ver la lista de otros usuarios del sistema.",
-            "users:create": "Permite crear nuevos usuarios (vendedores o administradores).",
-            "users:edit": "Permite editar la información y permisos de otros usuarios.",
-            "users:delete": "Permite eliminar usuarios del sistema.",
-            "account:view_own": "Permiso básico para ver su propia información de cuenta.",
-            "account:edit_own": "Permite al usuario editar su propio nombre y email.",
-            "account:change_password": "Permite al usuario cambiar su propia contraseña.",
-            "account:manage_users": "Permiso de alto nivel para crear, editar y eliminar otros usuarios.",
-            "clients:view": "Permite ver la lista de clientes asignados.",
-            "clients:create": "Permite registrar nuevos clientes en el sistema.",
-            "clients:edit": "Permite modificar la información de los clientes existentes.",
-            "clients:delete": "Permite eliminar clientes del sistema.",
-            "clients:view_account_balance": "Permite ver el saldo (deuda/crédito) de los clientes.",
-            "clients:manage_account_balance": "Permite ajustar el saldo de la cuenta de los clientes (ej. registrar un pago).",
-            "inventory:view": "Permite ver el stock de productos disponible.",
-            "inventory:manage": "Permite actualizar las cantidades de stock de los productos.",
-            "orders:view": "Permite ver el historial de pedidos.",
-            "orders:create": "Permite crear nuevos pedidos para los clientes.",
-            "orders:edit": "Permite modificar pedidos existentes.",
-            "orders:cancel": "Permite cancelar pedidos.",
-            "products:view": "Permite ver la lista de productos y sus precios.",
-            "products:create": "Permite añadir nuevos productos al catálogo.",
-            "products:edit": "Permite modificar productos existentes.",
-            "products:delete": "Permite eliminar productos del catálogo.",
-            "sellers:view": "Permite ver información sobre otros vendedores.",
-            "payments:view": "Permite ver los pagos registrados.",
-            "payments:manage": "Permite registrar o modificar pagos."
-          }
+          "create": "Crear",
+          "update": "Actualizar",
+          "saving": "Guardando..."
         }
+      }
+    },
+    "cash_flow": {
+      "config": {
+        "title": "Crea tu Proyección",
+        "initialBalance": "Saldo Inicial",
+        "totalIncome": "Total Ingresos",
+        "totalExpenses": "Total Egresos",
+        "startDate": "Fecha Inicio",
+        "endDate": "Fecha Fin"
       },
-      "pageTitles": {
-        "dashboard": "Dashboard",
-        "analytics": "Analíticas",
-        "clients": "Clientes",
-        "clientsMobile": "Clientes",
-        "orders": "Pedidos",
-        "ordersMobile": "Pedidos",
-        "inventory": "Inventario",
-        "inventoryMobile": "Inventario",
-        "products": "Productos",
-        "productsMobile": "Productos",
-        "payments": "Pagos",
-        "paymentsMobile": "Pagos",
-        "account": "Mi Cuenta",
-        "accountMobile": "Cuenta",
-        "settings": "Configuración",
-        "users": "Usuarios"
+      "report_title": "Reporte de Flujo de Fondos",
+      "calendar": {
+        "addTransaction": "Agregar Transacción",
+        "editTransaction": "Editar Transacción",
+        "description": "Concepto",
+        "type": "Tipo",
+        "income": "Ingreso",
+        "expense": "Egreso",
+        "amount": "Monto",
+        "date": "Fecha",
+        "save": "Guardar",
+        "cancel": "Cancelar",
+        "delete": "Eliminar",
+        "confirmDelete": "¿Está seguro que desea eliminar esta transacción?",
+        "projectedBalance": "Balance proyectado",
+        "dailyIncome": "Ingresos diarios",
+        "dailyExpenses": "Egresos diarios",
+        "edit": "Editar"
       },
-      "permissions": {
-        "groups": {
-          "users": "Usuarios",
-          "account": "Cuenta",
-          "clients": "Clientes",
-          "inventory": "Inventario",
-          "orders": "Pedidos",
-          "products": "Productos",
-          "sellers": "Vendedores",
-          "payments": "Pagos"
-        },
-        "labels": {
-          "users:view": "Ver usuarios",
-          "users:create": "Crear usuarios",
-          "users:edit": "Editar usuarios",
-          "users:delete": "Eliminar usuarios",
-          "account:view_own": "Ver cuenta propia",
-          "account:edit_own": "Editar cuenta propia",
-          "account:change_password": "Cambiar contraseña",
-          "account:manage_users": "Gestionar usuarios",
-          "clients:view": "Ver clientes",
-          "clients:create": "Crear clientes",
-          "clients:edit": "Editar clientes",
-          "clients:delete": "Eliminar clientes",
-          "clients:view_account_balance": "Ver saldo de cuenta",
-          "clients:manage_account_balance": "Gestionar saldo de cuenta",
-          "inventory:view": "Ver inventario",
-          "inventory:manage": "Gestionar inventario",
-          "orders:view": "Ver pedidos",
-          "orders:create": "Crear pedidos",
-          "orders:edit": "Editar pedidos",
-          "orders:cancel": "Cancelar pedidos",
-          "products:view": "Ver productos",
-          "products:create": "Crear productos",
-          "products:edit": "Editar productos",
-          "products:delete": "Eliminar productos",
-          "sellers:view": "Ver vendedores",
-          "payments:view": "Ver pagos",
-          "payments:manage": "Gestionar pagos"
-        },
-        "descriptions": {
-          "users:view": "Permite ver la lista de otros usuarios del sistema.",
-          "users:create": "Permite crear nuevos usuarios (vendedores o administradores).",
-          "users:edit": "Permite editar la información y permisos de otros usuarios.",
-          "users:delete": "Permite eliminar usuarios del sistema.",
-          "account:view_own": "Permiso básico para ver su propia información de cuenta.",
-          "account:edit_own": "Permite al usuario editar su propio nombre y email.",
-          "account:change_password": "Permite al usuario cambiar su propia contraseña.",
-          "account:manage_users": "Permiso de alto nivel para crear, editar y eliminar otros usuarios.",
-          "clients:view": "Permite ver la lista de clientes asignados.",
-          "clients:create": "Permite registrar nuevos clientes en el sistema.",
-          "clients:edit": "Permite modificar la información de los clientes existentes.",
-          "clients:delete": "Permite eliminar clientes del sistema.",
-          "clients:view_account_balance": "Permite ver el saldo (deuda/crédito) de los clientes.",
-          "clients:manage_account_balance": "Permite ajustar el saldo de la cuenta de los clientes (ej. registrar un pago).",
-          "inventory:view": "Permite ver el stock de productos disponible.",
-          "inventory:manage": "Permite actualizar las cantidades de stock de los productos.",
-          "orders:view": "Permite ver el historial de pedidos.",
-          "orders:create": "Permite crear nuevos pedidos para los clientes.",
-          "orders:edit": "Permite modificar pedidos existentes.",
-          "orders:cancel": "Permite cancelar pedidos.",
-          "products:view": "Permite ver la lista de productos y sus precios.",
-          "products:create": "Permite añadir nuevos productos al catálogo.",
-          "products:edit": "Permite modificar productos existentes.",
-          "products:delete": "Permite eliminar productos del catálogo.",
-          "sellers:view": "Permite ver información sobre otros vendedores.",
-          "payments:view": "Permite ver los pagos registrados.",
-          "payments:manage": "Permite registrar o modificar pagos."
-        }
+      "reset": {
+        "button": "Reiniciar formulario",
+        "success": "Formulario y proyecciones reiniciados correctamente"
       },
-      "layout": {
-        "title": "Panel de Administración Repartito",
-        "description": "Accede a las herramientas administrativas de Repartito para gestionar tu negocio de manera eficiente."
+      "clear_events": {
+        "button": "Eliminar ingresos/egresos",
+        "success": "Ingresos y egresos eliminados correctamente"
+      },
+      "final_balance": "Balance Final",
+      "help": {
+        "title": "Ayuda",
+        "intro": "Para usar la aplicación de Cash Flow",
+        "step1": "Ingrese su saldo inicial, ingresos y egresos totales",
+        "step2": "Seleccione las fechas de inicio y fin para la proyección",
+        "step3": "Agregue eventos de ingresos o egresos haciendo clic en el calendario",
+        "step4": "La proyección se calcula automáticamente al cambiar cualquier dato",
+        "step5": "El color verde indica saldo positivo, el rojo negativo"
+      },
+      "export": {
+        "button": "Exportar a PDF",
+        "success": "Reporte exportado como"
+      },
+      "errors": {
+        "missing_fields": "Por favor complete los campos de fecha y saldo inicial antes de exportar.",
+        "pdf_generation": "Ocurrió un error al generar el PDF. Por favor intente de nuevo."
       }
     },
     "client": {
@@ -470,12 +125,12 @@
     },
     "auth": {
       "signIn": {
-        "title": "Iniciar sesión",
+        "title": "Accede a tu Panel de Finna",
+        "description": "Ingresa tus credenciales para gestionar las finanzas de tu negocio",
         "email": "Correo electrónico",
         "password": "Contraseña",
-        "button": "Iniciar sesión",
-        "signing": "Iniciando sesión...",
-        "goToSignUp": "¿No tienes cuenta? Crear cuenta",
+        "button": "Acceder al Panel",
+        "signing": "Accediendo al Panel...",
         "errors": {
           "emptyFields": "Por favor complete todos los campos",
           "invalidCredentials": "Error al iniciar sesión",
@@ -483,15 +138,17 @@
         }
       },
       "signUp": {
-        "title": "Crear cuenta",
+        "title": "Crea tu Cuenta de Finna",
+        "description": "Comienza a gestionar las finanzas de tu negocio hoy mismo",
         "firstName": "Nombre",
         "lastName": "Apellido",
         "email": "Correo electrónico",
         "password": "Contraseña",
         "confirmPassword": "Confirmar contraseña",
+        "companyName": "Nombre de la Empresa/Negocio",
+        "companyNamePlaceholder": "Nombre de tu Empresa o Negocio",
         "button": "Crear cuenta",
         "creating": "Creando cuenta...",
-        "goToSignIn": "¿Ya tienes cuenta? Inicia sesión",
         "errors": {
           "emptyFields": "Por favor complete todos los campos",
           "passwordsDoNotMatch": "Las contraseñas no coinciden",
@@ -499,430 +156,291 @@
           "generic": "Ha ocurrido un error al crear la cuenta"
         }
       },
-      "account": {
-        "title": "Gestión de Cuenta",
-        "subtitle": "Configuración y usuarios",
-        "profile": {
-          "title": "Mi Perfil",
-          "personalInfo": "Información Personal",
-          "personalInfoDescription": "Actualiza tu información personal y configuración de cuenta",
-          "name": "Nombre",
-          "lastName": "Apellido",
-          "email": "Email",
-          "phone": "Teléfono",
-          "currentRole": "Rol actual",
-          "saveChanges": "Guardar Cambios"
-        },
-        "security": {
-          "title": "Seguridad",
-          "description": "Gestiona tu contraseña y configuración de seguridad",
-          "currentPassword": "Contraseña Actual",
-          "newPassword": "Nueva Contraseña",
-          "confirmPassword": "Confirmar Nueva Contraseña",
-          "updatePassword": "Actualizar Contraseña",
-          "updatingPassword": "Actualizando...",
-          "errors": {
-            "emptyFields": "Todos los campos son requeridos",
-            "passwordsDoNotMatch": "Las contraseñas no coinciden",
-            "passwordTooShort": "La contraseña debe tener al menos 6 caracteres",
-            "invalidCurrentPassword": "La contraseña actual no es correcta",
-            "updateFailed": "Error al actualizar la contraseña"
-          },
-          "success": {
-            "passwordUpdated": "Contraseña actualizada exitosamente"
-          }
-        },
-        "clients": {
-          "title": "Gestión de Clientes",
-          "subtitle": "Análisis de Comportamiento de Clientes",
-          "description": "Visualiza y gestiona las categorías de clientes basadas en su comportamiento de compra",
-          "categories": {
-            "title": "Categorías de Clientes",
-            "behaviorTitle": "Por Comportamiento de Compra",
-            "spendingTitle": "Por Nivel de Gasto",
-            "new": "Cliente Nuevo",
-            "newDescription": "Solo una compra realizada",
-            "possibleActive": "Posible Activo",
-            "possibleActiveDescription": "Volvió a comprar al mes de su primera compra",
-            "possibleInactive": "Posible Inactivo",
-            "possibleInactiveDescription": "No volvió a comprar al mes de su primera compra",
-            "active": "Cliente Activo",
-            "activeDescription": "+2 compras en los últimos 2 meses",
-            "inactive": "Cliente Inactivo",
-            "inactiveDescription": "No compra hace más de 2 meses",
-            "recovered": "Cliente Recuperado",
-            "recoveredDescription": "Inactivo por más de 2 meses y volvió a comprar",
-            "lost": "Cliente Perdido",
-            "lostDescription": "Clientes que no han realizado compras en más de 4 meses.",
-            "tracking": "En Seguimiento",
-            "trackingDescription": "Clientes con una sola compra, entre 1 y 4 semanas de antigüedad.",
-            "premium": "Premium (A)",
-            "premiumDescription": "Clientes con mayor volumen de compra.",
-            "standard": "Estándar (B)",
-            "standardDescription": "Clientes con volumen de compra regular.",
-            "basic": "Básico (C)",
-            "basicDescription": "Clientes con bajo volumen de compra.",
-            "spendingCalculationNote": "Cálculo por compras del último mes.",
-            "kgRange": "Rango KG"
-          },
-          "stats": {
-            "totalClients": "Clientes Totales",
-            "averageSpending": "Gasto Promedio",
-            "repeatRate": "Tasa de Repetición",
-            "averageOrders": "Pedidos Promedio"
-          },
-          "actions": {
-            "sendWhatsApp": "Enviar WhatsApp",
-            "viewProfile": "Ver Perfil",
-            "viewOrders": "Ver Pedidos"
-          },
-          "empty": {
-            "title": "No hay clientes",
-            "description": "Aún no tienes clientes registrados con pedidos"
-          }
-        },
-        "users": {
-          "title": "Gestión de Usuarios",
-          "subtitle": "Usuarios del Sistema",
-          "description": "Gestiona los usuarios y sus permisos",
-          "newUser": "Nuevo Usuario",
-          "noUsers": "No hay usuarios registrados",
-          "status": {
-            "active": "Activo",
-            "inactive": "Inactivo"
-          },
-          "roles": {
-            "admin": "Administrador",
-            "user": "Usuario"
-          },
-          "actions": {
-            "edit": "Editar",
-            "delete": "Eliminar",
-            "confirmDelete": "¿Estás seguro de que deseas eliminar este usuario?"
-          },
-          "form": {
-            "createTitle": "Crear Nuevo Usuario",
-            "editTitle": "Editar Usuario",
-            "name": "Nombre",
-            "lastName": "Apellido",
-            "email": "Email",
-            "password": "Contraseña",
-            "role": "Rol",
-            "cancel": "Cancelar",
-            "create": "Crear Usuario",
-            "update": "Actualizar Usuario",
-            "creating": "Creando...",
-            "updating": "Actualizando...",
-            "errors": {
-              "emptyFields": "Todos los campos son requeridos",
-              "invalidEmail": "Email inválido",
-              "passwordTooShort": "La contraseña debe tener al menos 6 caracteres",
-              "emailExists": "Ya existe un usuario con este email",
-              "createFailed": "Error al crear el usuario",
-              "updateFailed": "Error al actualizar el usuario"
-            },
-            "success": {
-              "userCreated": "Usuario creado exitosamente",
-              "userUpdated": "Usuario actualizado exitosamente"
-            }
-          }
-        }
+      "layout": {
+        "title": "Gestiona el flujo financiero de tu negocio con Finna",
+        "description": "La herramienta para crear, verificar y controlar el flujo de efectivo de tu empresa o emprendimiento de manera simple y efectiva."
       }
     },
-    "tablePage": {
-      "title": "Tabla de Órdenes",
-      "description": "Una lista de todas las órdenes."
+    "errors": {
+      "title": "Error"
     },
-    "menu": {
-      "title": "Gestión de Menú",
-      "categories": {
-        "noDishes": "No hay platos disponibles en esta categoría"
-      },
-      "dish": {
-        "outOfStock": "Agotado",
-        "available": "Disponible"
-      },
-      "footer": {
-        "poweredBy": "Menú digital creado con",
-        "businessInfo": "Información del negocio"
-      }
+    "success": {
+      "title": "Éxito"
+    },
+    "help": {
+      "title": "Ayuda"
     }
   },
   "web": {
     "global": {
-      "primaryCta": "Contáctanos",
-      "secondaryCta": "Comienza ahora"
-    },
-    "menu": {
-      "title": "Nuestros Servicios",
-      "todaySpecial": "Servicio Destacado",
-      "featuredDish": "Servicio Destacado",
-      "specialDescription": "Descubre nuestro servicio destacado del mes, diseñado para potenciar tu negocio.",
-      "todayOnly": "Solo este mes",
-      "comingSoon": "Próximamente... Estamos preparando nuestros servicios.",
-      "address": "Dirección",
-      "phone": "Teléfono",
-      "hours": "Horario",
-      "contact": "Contacto",
-      "searchPlaceholder": "Buscar servicios...",
-      "allCategories": "Todas las categorías",
-      "specialsOnly": "Solo destacados",
-      "filters": "Filtros",
-      "noResults": "No se encontraron servicios con los filtros aplicados.",
-      "clearFilters": "Limpiar filtros",
-      "currency": "$",
-      "closed": "Cerrado",
-      "categories": {
-        "noDishes": "No hay servicios disponibles en esta categoría"
-      },
-      "dish": {
-        "outOfStock": "No disponible",
-        "available": "Disponible"
-      },
-      "footer": {
-        "poweredBy": "Plataforma creada con",
-        "businessInfo": "Información del negocio"
-      }
+      "primaryCta": "Solicitar préstamo",
+      "secondaryCta": "Cotizar ahora"
     },
     "header": {
       "home": "Inicio",
-      "features": "Características",
-      "pricing": "Precios",
-      "about": "Nosotros",
+      "projects": "Proyectos",
+      "services": "Servicios",
+      "servicesDescription": "Nuestros servicios de desarrollo de software",
+      "process": "Proceso",
+      "processDescription": "Cómo trabajamos con nuestros clientes",
+      "product": {
+        "title": "Producto",
+        "description": "El desarrollo de software personalizado requiere experiencia y metodologías probadas.",
+        "pricing": "Precios"
+      },
+      "blog": "Blog",
       "contact": "Contacto",
-      "logIn": "Iniciar Sesión",
-      "getStarted": "Comenzar",
-      "navigation": "Navegación"
+      "signIn": "Iniciar sesión",
+      "signUp": "Registrarse"
     },
     "home": {
       "meta": {
-        "title": {
-          "template": "%s - Repartito",
-          "default": "Repartito - Métricas de Negocio para Retención de Clientes"
-        },
-        "description": "Repartito te da las herramientas necesarias para analizar las métricas de tu negocio, entender el comportamiento de tus clientes y tomar decisiones estratégicas para aumentar la retención y las ventas."
+        "title": "Finna - Préstamos Personales",
+        "description": "Préstamos personales rápidos y fáciles. Cotiza tu préstamo en minutos y recibe el dinero en menos de 24 horas."
       },
       "hero": {
-        "title": "La plataforma que impulsa tu negocio",
-        "paragraph": "Repartito te da las herramientas necesarias para analizar las métricas de tu negocio, entender el comportamiento de tus clientes y tomar decisiones estratégicas para aumentar la retención y las ventas.",
-        "primaryCta": "Comienza ahora",
-        "secondaryCta": "Contactar a ventas"
-      },
-      "features": {
-        "title": "¿Por qué elegir Repartito?",
-        "paragraph": "Desde analíticas detalladas hasta herramientas de comunicación, Repartito tiene todo lo que necesitas para llevar tu negocio al siguiente nivel."
-      },
-      "metrics": {
-        "title": "Entiende tu negocio a fondo",
-        "description": "Métricas clave para entender la salud de tu negocio"
-      },
-      "stats": {
-        "title": "Cómo funciona Repartito",
-        "one": {
-          "title": "Conecta tus datos",
-          "description": "Importa tus ventas desde un Excel o conéctate directamente a tu sistema de punto de venta."
-        },
-        "two": {
-          "title": "Visualiza tus métricas",
-          "description": "Explora dashboards interactivos con toda la información clave de tu negocio."
-        },
-        "three": {
-          "title": "Actúa y crece",
-          "description": "Usa los insights para crear campañas, fidelizar clientes y tomar decisiones estratégicas."
+        "announcement": "¡Nueva plataforma digital de préstamos!",
+        "title": "Préstamos personales a tu medida",
+        "subtitle": "Cotiza tu préstamo al instante y recibe el dinero en menos de 24 horas.",
+        "cta": "¡Solicita ahora!",
+        "calculator": {
+          "title": "Calcula tu préstamo",
+          "amount": "Monto del préstamo",
+          "term": "Plazo (meses)",
+          "rate": "Tasa de interés anual",
+          "monthlyPayment": "Cuota mensual",
+          "totalPayment": "Total a pagar",
+          "calculate": "Calcular"
         }
       },
+      "cases": {
+        "title": "¿Por qué elegir Finna?",
+        "subtitle": "Miles de personas ya han confiado en nosotros para solucionar sus necesidades financieras.",
+        "quote": "Préstamos personales para cada necesidad",
+        "projectsTitle": "Tipos de préstamos",
+        "projectStatus": {
+          "finished": "Disponible",
+          "inProgress": "Promoción"
+        }
+      },
+      "features": {
+        "title": "Ventajas de Finna",
+        "description": "Ofrecemos soluciones financieras rápidas y accesibles para cubrir tus necesidades",
+        "items": [
+          {
+            "title": "Proceso 100% Digital",
+            "description": "Solicita tu préstamo desde cualquier dispositivo, sin papeleos ni visitas a sucursales."
+          },
+          {
+            "title": "Aprobación Rápida",
+            "description": "Evaluación y respuesta en minutos, con desembolso del dinero en menos de 24 horas."
+          },
+          {
+            "title": "Sin Garantías",
+            "description": "No necesitas presentar avales ni propiedades como garantía para acceder a tu préstamo."
+          },
+          {
+            "title": "Tasas Competitivas",
+            "description": "Ofrecemos condiciones financieras transparentes y competitivas adaptadas a tu perfil."
+          },
+          {
+            "title": "Montos Flexibles",
+            "description": "Solicita desde pequeños préstamos hasta montos mayores según tus necesidades particulares."
+          },
+          {
+            "title": "Atención Personalizada",
+            "description": "Contamos con asesores especializados para ayudarte en cada paso del proceso."
+          }
+        ]
+      },
+      "stats": {
+        "title": "Nuestro Proceso",
+        "description": "Obtén tu préstamo en 3 simples pasos",
+        "process": [
+          {
+            "title": "Cotización",
+            "description": "Completa el formulario con tus datos y el monto que necesitas para recibir una cotización personalizada."
+          },
+          {
+            "title": "Verificación",
+            "description": "Nuestro sistema analizará tu solicitud y te informará de inmediato sobre la aprobación de tu préstamo."
+          },
+          {
+            "title": "Desembolso",
+            "description": "Una vez aprobado, recibirás el dinero en menos de 24 horas."
+          }
+        ]
+      },
       "testimonials": {
-        "title": "Lo que dicen nuestros clientes",
-        "description": "Descubre cómo Repartito está ayudando a negocios como el tuyo a crecer.",
-        "clients": [
+        "title": "Experiencias de Nuestros Clientes",
+        "description": "Lo que opinan quienes ya han obtenido préstamos con Finna",
+        "items": [
           {
-            "name": "Laura G.",
-            "role": "Dueña de tienda local",
-            "description": "Desde que uso Repartito, entiendo mucho mejor a mis clientes. He podido crear campañas de marketing personalizadas que han aumentado mis ventas y la fidelidad de mis clientes."
+            "title": "Me salvó en una emergencia",
+            "description": "Che, necesitaba plata urgente para arreglar el auto y en menos de un día ya tenía el dinero en mi cuenta. Una solución buenísima cuando estás en apuros. El trámite fue re simple.",
+            "author": {
+              "name": "Martín Gómez",
+              "location": "Buenos Aires"
+            }
           },
           {
-            "name": "Carlos M.",
-            "role": "Gerente de E-commerce",
-            "description": "Repartito me ha dado la visibilidad que necesitaba sobre mi negocio. Ahora puedo tomar decisiones estratégicas basadas en datos reales, no en intuiciones."
+            "title": "Préstamo sin vueltas",
+            "description": "Después de que varios bancos me boludearan con mil requisitos, Finna me aprobó un préstamo al toque y con mejores condiciones. Cero burocracia, todo digital. La verdad, un golazo.",
+            "author": {
+              "name": "Carolina Ríos",
+              "location": "Córdoba"
+            }
           },
           {
-            "name": "Ana R.",
-            "role": "Directora de Marketing",
-            "description": "Con la segmentación de clientes de Repartito, he podido identificar a mis clientes más valiosos y crear programas de fidelización que funcionan. ¡Mi tasa de retención ha mejorado muchísimo!"
+            "title": "Excelente tasa de interés",
+            "description": "Comparé en todos lados y Finna me ofreció la mejor tasa. Pedí el préstamo para remodelar mi departamento y todo el proceso fue muy transparente. Terminé pagando exactamente lo que me dijeron desde el principio.",
+            "author": {
+              "name": "Gabriel Méndez",
+              "location": "Mendoza"
+            }
           },
           {
-            "name": "Pedro S.",
-            "role": "Emprendedor",
-            "description": "Me sorprendió lo fácil que es de usar Repartito. En pocos minutos ya tenía mis dashboards configurados y empecé a ver información súper valiosa. ¡La recomiendo!"
+            "title": "Atención personalizada",
+            "description": "Lo que más me gustó fue la atención por WhatsApp. Tenía dudas sobre el proceso y me respondieron al toque. Nada de esperar horas al teléfono como con los bancos tradicionales. ¡Súper recomendable!",
+            "author": {
+              "name": "Laura Fernández",
+              "location": "Rosario"
+            }
+          }
+        ]
+      },
+      "faq": {
+        "title": "Preguntas Frecuentes",
+        "description": "Resolvemos tus dudas sobre préstamos personales y el proceso de solicitud.",
+        "cta": "¿Aún tienes preguntas? Contáctanos",
+        "needMore": "¿Necesitas más información?",
+        "contactDescription": "Si no encontraste la respuesta a tu pregunta, nuestro equipo de asesores financieros está listo para ayudarte.",
+        "items": [
+          {
+            "question": "¿Cuáles son los requisitos para solicitar un préstamo?",
+            "answer": "Para solicitar un préstamo con Finna necesitas: ser mayor de edad, tener DNI o residencia legal, y contar con ingresos."
+          },
+          {
+            "question": "¿En cuánto tiempo recibo el dinero?",
+            "answer": "Una vez aprobada tu solicitud, recibirás el dinero en un plazo máximo de 24 horas hábiles, aunque la mayoría de nuestros clientes lo reciben en solo unas horas."
+          },
+          {
+            "question": "¿Qué tasas de interés manejan?",
+            "answer": "Nuestras tasas de interés varían según el perfil del solicitante y el monto requerido. Puedes conocer tu tasa personalizada utilizando nuestra calculadora en línea sin compromiso alguno."
+          },
+          {
+            "question": "¿Puedo cancelar mi préstamo anticipadamente?",
+            "answer": "¡Por supuesto! En Finna puedes cancelar tu préstamo antes del plazo establecido sin ninguna penalización. Al hacerlo, solo pagarás los intereses correspondientes al tiempo que utilizaste el dinero."
           }
         ]
       },
       "cta": {
-        "title": "¿Listo para empezar?",
-        "paragraph": "Empieza a usar Repartito hoy mismo y descubre todo lo que puedes lograr.",
-        "primaryCta": "Comienza ahora",
-        "secondaryCta": "Contactar a ventas"
+        "title": "Obtén el dinero que necesitas hoy mismo",
+        "description": "Únete a miles de personas que ya han solucionado sus necesidades financieras con Finna. Proceso 100% digital, respuesta inmediata y los mejores términos del mercado.",
+        "calendly": {
+          "title": "Habla con un asesor",
+          "subtitle": "15 minutos · Gratis",
+          "benefits": [
+            "Resuelve todas tus dudas",
+            "Recibe asesoría personalizada",
+            "Conoce opciones especiales para tu caso"
+          ]
+        }
       },
-      "faq": {
-        "title": "Preguntas Frecuentes",
-        "items": [
-          {
-            "question": "¿Qué es Repartito?",
-            "answer": "Repartito es una plataforma que ayuda a pequeñas y medianas empresas a analizar sus datos de negocio para tomar mejores decisiones, con foco en la retención de clientes."
-          },
-          {
-            "question": "¿Cómo funciona?",
-            "answer": "Conectas tu sistema de ventas (o subes tus datos) y Repartito los procesa automáticamente para generar métricas e informes clave."
-          },
-          {
-            "question": "¿Qué tipo de negocios pueden usarlo?",
-            "answer": "Cualquier negocio que busque entender mejor a sus clientes y potenciar sus ventas. Es ideal para tiendas, restaurantes y servicios."
-          },
-          {
-            "question": "¿Necesito instalar algo?",
-            "answer": "No, Repartito es una plataforma 100% online. Solo necesitas una conexión a internet para acceder a tus dashboards."
-          }
-        ]
-      },
-      "cases": {
-        "title": "Casos de Éxito",
-        "description": "Descubre cómo Repartito ha ayudado a negocios como el tuyo a crecer.",
-        "quote": "Los datos son el nuevo petróleo. Repartito te ayuda a refinarlo.",
-        "author": "Científico de Datos",
-        "authorRole": "en Repartito"
+      "newsletter": {
+        "title": "Mantente Actualizado",
+        "description": "Suscríbete para recibir las últimas noticias sobre desarrollo de productos digitales y MVPs",
+        "placeholder": "Tu dirección de email",
+        "subscribe": "Suscribirse",
+        "subscribing": "Suscribiendo...",
+        "success": "¡Gracias por suscribirte! Recibirás nuestra próxima actualización.",
+        "error": "Algo salió mal. Por favor, inténtalo de nuevo.",
+        "validation": "Por favor, introduce una dirección de email válida.",
+        "privacy": "Prometemos no enviar spam, solo contenido relevante"
       }
     },
     "pricing": {
-      "meta": {
-        "title": "Precios - Repartito",
-        "description": "Encuentra el plan perfecto para tu negocio. Comienza gratis."
-      },
-      "title": "Planes flexibles para negocios de todos los tamaños",
-      "paragraph": "Elige el plan que mejor se adapte a tus necesidades y empieza a crecer con Repartito.",
-      "primaryCta": "Comienza ahora",
-      "plans": {
-        "monthly": "Mensual",
-        "annually": "Anual",
-        "save": "Ahorra",
-        "free": {
-          "title": "Gratis",
-          "price": "Gratis",
-          "frequency": "para siempre",
-          "description": "Para negocios que recién comienzan.",
-          "features": [
-            "Hasta 100 clientes",
-            "Analíticas básicas",
-            "Soporte por email"
-          ]
+      "title": "Precios que tienen sentido para tu práctica",
+      "description": "Elige el plan que se adapte a las necesidades de tu práctica contable",
+      "monthly": "mes",
+      "popular": "POPULAR",
+      "tryIt": "Pruébalo",
+      "contactUs": "Contáctanos",
+      "plans": [
+        {
+          "name": "Pequeña Empresa",
+          "description": "Perfecto para pequeñas prácticas contables que están comenzando",
+          "price": "40"
         },
-        "pro": {
-          "title": "Pro",
-          "price": "$49",
-          "frequency": "/mes",
-          "description": "Para negocios en crecimiento.",
-          "features": [
-            "Hasta 1.000 clientes",
-            "Analíticas avanzadas",
-            "Segmentación de clientes",
-            "Soporte prioritario"
-          ]
+        {
+          "name": "Mediana Empresa",
+          "description": "Ideal para firmas establecidas que buscan expandir sus servicios",
+          "price": "80"
         },
-        "enterprise": {
-          "title": "Empresarial",
-          "price": "Personalizado",
-          "frequency": "",
-          "description": "Para grandes negocios y corporaciones.",
-          "features": [
-            "Clientes ilimitados",
-            "Integraciones a medida",
-            "Gestor de cuenta dedicado",
-            "Soporte 24/7"
-          ]
+        {
+          "name": "Empresarial",
+          "description": "Solución completa para grandes firmas contables con necesidades complejas",
+          "price": "160"
         }
+      ],
+      "features": {
+        "sso": "Inicio de Sesión Único (SSO)",
+        "ai": "Asistente de IA",
+        "version": "Control de Versiones",
+        "members": "{count} miembros del equipo"
       }
     },
     "blog": {
       "meta": {
-        "title": "Blog sobre Alimentación Sostenible",
-        "description": "Consejos, recetas y artículos sobre cómo reducir el desperdicio alimentario y promover un consumo más sostenible."
+        "title": "Blog de Perspectivas Fiscales",
+        "description": "Análisis expertos, consejos y actualizaciones sobre gestión tributaria para contadores y profesionales financieros."
       }
     },
     "contact": {
       "meta": {
-        "title": "Contacto - Repartito",
-        "description": "Ponte en contacto con nosotros. Estamos aquí para ayudarte."
-      },
-      "title": "Ponte en Contacto",
-      "paragraph": "¿Tienes preguntas o quieres más información? Envíanos un mensaje y te responderemos lo antes posible.",
-      "form": {
-        "name": "Nombre",
-        "email": "Correo electrónico",
-        "message": "Mensaje",
-        "send": "Enviar mensaje",
-        "sending": "Enviando...",
-        "success": "¡Mensaje enviado con éxito!",
-        "error": "Hubo un error al enviar el mensaje.",
-        "success_message": "¡Mensaje enviado con éxito!",
-        "error_message": "Hubo un error al enviar el mensaje.",
-        "name_placeholder": "Tu nombre",
-        "email_placeholder": "Tu correo electrónico",
-        "message_placeholder": "Tu mensaje",
-        "send_button": "Enviar Mensaje",
-        "subtitleInfo": "Ponte en contacto con nosotros",
-        "title": "Envíanos un mensaje",
-        "subtitle": "Te responderemos lo antes posible"
+        "title": "Contáctanos",
+        "description": "Contacta con nuestro equipo para discutir cómo AppWise puede ayudar a transformar tus ideas en soluciones digitales exitosas y hacer crecer tu negocio."
       },
       "hero": {
+        "title": "Estamos aquí para ayudarte",
+        "description": "Nuestro equipo está disponible para ayudarte en cada paso del camino con tu proyecto de desarrollo.",
+        "cta": "Enviar mensaje",
         "benefits": [
           {
-            "title": "Soporte Directo",
-            "description": "Habla con una persona real que puede ayudarte con tus necesidades."
+            "title": "Respuesta rápida",
+            "description": "Nuestros expertos te ayudarán a llevar tu idea al siguiente nivel con soluciones digitales personalizadas."
           },
           {
-            "title": "Respuesta Rápida",
-            "description": "Te responderemos en menos de 24 horas."
+            "title": "Soporte continuo",
+            "description": "Ofrecemos asistencia técnica y mejoras continuas para mantener tu aplicación funcionando perfectamente."
           },
           {
-            "title": "Soluciones Personalizadas",
-            "description": "Te ayudaremos a encontrar la solución adecuada para tu negocio."
+            "title": "Soluciones personalizadas",
+            "description": "Cada proyecto es único, por eso desarrollamos soluciones a medida que se adaptan a tus necesidades específicas."
           }
-        ]
+        ],
+        "form": {
+          "title": "Hablemos sobre tu proyecto",
+          "firstName": "Nombre",
+          "lastName": "Apellido",
+          "date": "Fecha preferida",
+          "resume": "Adjunta archivos relevantes",
+          "cta": "Enviar"
+        }
+      },
+      "form": {
+        "title": "Contáctanos",
+        "subtitle": "Respondemos en 24 horas",
+        "subtitleInfo": "Transformando ideas en soluciones digitales",
+        "name_placeholder": "Nombre completo",
+        "email_placeholder": "Dirección de correo",
+        "message_placeholder": "Cuéntanos sobre tu proyecto",
+        "sending": "Enviando...",
+        "send_button": "Enviar mensaje",
+        "success_message": "¡Tu mensaje ha sido enviado con éxito!",
+        "error_message": "Error al enviar el mensaje. Por favor, inténtalo de nuevo más tarde."
       }
-    },
-    "footer": {
-      "product": {
-        "title": "Producto",
-        "features": "Características",
-        "pricing": "Precios",
-        "about": "Nosotros",
-        "contact": "Contacto"
-      },
-      "company": {
-        "title": "Compañía",
-        "about": "Nosotros",
-        "blog": "Blog",
-        "careers": "Carreras"
-      },
-      "legal": {
-        "title": "Legal",
-        "terms": "Términos de Servicio",
-        "privacy": "Política de Privacidad"
-      },
-      "copy": "Todos los derechos reservados.",
-      "companyDescription": "Repartito es la plataforma que te ayuda a entender a tus clientes e impulsar tu negocio. Métricas a fondo, retención de clientes y control total de tu empresa.",
-      "navigation": "Navegación",
-      "menuCreation": "Creación de Menú Digital",
-      "mobileFirst": "Diseño Mobile-First",
-      "analytics": "Análisis e Insights",
-      "getStarted": "Comenzar",
-      "rights": "Todos los derechos reservados",
-      "description": "El software de gestión definitivo para revolucionar tu forma de vender."
-    },
-    "landing": {
-      "title": "Repartito"
     }
-  },
-  "error": {
-    "go_back": "Volver"
   }
 }
+

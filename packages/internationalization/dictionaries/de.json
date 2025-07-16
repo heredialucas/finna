@@ -1,7 +1,7 @@
 {
   "app": {
     "admin": {
-      "title": "Administrationsbereich",
+      "title": "Admin-Dashboard",
       "navigation": {
         "dashboard": "Dashboard",
         "users": "Benutzer",
@@ -45,6 +45,61 @@
         }
       }
     },
+    "cash_flow": {
+      "config": {
+        "title": "Erstellen Sie Ihre Projektion",
+        "initialBalance": "Anfangssaldo",
+        "totalIncome": "Gesamteinkommen",
+        "totalExpenses": "Gesamtausgaben",
+        "startDate": "Startdatum",
+        "endDate": "Enddatum"
+      },
+      "report_title": "Cashflow-Bericht",
+      "calendar": {
+        "addTransaction": "Transaktion hinzufügen",
+        "editTransaction": "Transaktion bearbeiten",
+        "description": "Konzept",
+        "type": "Typ",
+        "income": "Einkommen",
+        "expense": "Ausgabe",
+        "amount": "Betrag",
+        "date": "Datum",
+        "save": "Speichern",
+        "cancel": "Abbrechen",
+        "delete": "Löschen",
+        "confirmDelete": "Sind Sie sicher, dass Sie diese Transaktion löschen möchten?",
+        "projectedBalance": "Prognostizierter Kontostand",
+        "dailyIncome": "Tägliche Einnahmen",
+        "dailyExpenses": "Tägliche Ausgaben",
+        "edit": "Bearbeiten"
+      },
+      "reset": {
+        "button": "Formular zurücksetzen",
+        "success": "Formular und Projektionen erfolgreich zurückgesetzt"
+      },
+      "clear_events": {
+        "button": "Einnahmen/Ausgaben löschen",
+        "success": "Einnahmen und Ausgaben erfolgreich gelöscht"
+      },
+      "final_balance": "Endgültiger Kontostand",
+      "help": {
+        "title": "Hilfe",
+        "intro": "So verwenden Sie die Cash-Flow-Anwendung",
+        "step1": "Geben Sie Ihren Anfangssaldo, Gesamteinkommen und -ausgaben ein",
+        "step2": "Wählen Sie Start- und Enddatum für die Projektion aus",
+        "step3": "Fügen Sie Einnahmen- oder Ausgabenereignisse hinzu, indem Sie auf den Kalender klicken",
+        "step4": "Die Projektion wird automatisch berechnet, wenn sich Daten ändern",
+        "step5": "Grüne Farbe zeigt positiven Kontostand an, rot zeigt negativen Kontostand an"
+      },
+      "export": {
+        "button": "Als PDF exportieren",
+        "success": "Bericht exportiert als"
+      },
+      "errors": {
+        "missing_fields": "Bitte füllen Sie die Datums- und Anfangssaldofelder aus, bevor Sie exportieren.",
+        "pdf_generation": "Beim Generieren des PDFs ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut."
+      }
+    },
     "client": {
       "title": "Kundenportal",
       "navigation": {
@@ -70,28 +125,30 @@
     },
     "auth": {
       "signIn": {
-        "title": "Anmelden",
+        "title": "Zugriff auf Ihr Finna-Dashboard",
+        "description": "Geben Sie Ihre Anmeldedaten ein, um die Finanzen Ihres Unternehmens zu verwalten",
         "email": "E-Mail",
         "password": "Passwort",
-        "button": "Anmelden",
-        "signing": "Anmeldung läuft...",
-        "goToSignUp": "Noch kein Konto? Registrieren",
+        "button": "Dashboard zugreifen",
+        "signing": "Zugriff auf Dashboard...",
         "errors": {
           "emptyFields": "Bitte füllen Sie alle Felder aus",
-          "invalidCredentials": "Fehler bei der Anmeldung",
-          "generic": "Bei der Anmeldung ist ein Fehler aufgetreten"
+          "invalidCredentials": "Fehler beim Anmelden",
+          "generic": "Beim Anmelden ist ein Fehler aufgetreten"
         }
       },
       "signUp": {
-        "title": "Konto erstellen",
+        "title": "Erstellen Sie Ihr Finna-Konto",
+        "description": "Beginnen Sie noch heute mit der Verwaltung Ihrer Unternehmensfinanzen",
         "firstName": "Vorname",
         "lastName": "Nachname",
         "email": "E-Mail",
         "password": "Passwort",
         "confirmPassword": "Passwort bestätigen",
+        "companyName": "Firmen-/Geschäftsname",
+        "companyNamePlaceholder": "Name Ihres Unternehmens oder Geschäfts",
         "button": "Konto erstellen",
         "creating": "Konto wird erstellt...",
-        "goToSignIn": "Bereits ein Konto? Anmelden",
         "errors": {
           "emptyFields": "Bitte füllen Sie alle Felder aus",
           "passwordsDoNotMatch": "Passwörter stimmen nicht überein",
@@ -100,9 +157,18 @@
         }
       },
       "layout": {
-        "title": "Interne Tools für AppWise",
-        "description": "Interne Tools für AppWise, die Ihnen bei der Verwaltung unserer Produkte und Dienstleistungen helfen."
+        "title": "Verwalten Sie den Finanzfluss Ihres Unternehmens mit Finna",
+        "description": "Das Werkzeug zum Erstellen, Überprüfen und Kontrollieren des Geldflusses Ihres Unternehmens oder Ventures auf einfache und effektive Weise."
       }
+    },
+    "errors": {
+      "title": "Fehler"
+    },
+    "success": {
+      "title": "Erfolg"
+    },
+    "help": {
+      "title": "Hilfe"
     }
   },
   "web": {
@@ -126,14 +192,7 @@
       "docs": "Dokumente",
       "contact": "Kontakt",
       "signIn": "Anmelden",
-      "signUp": "Loslegen",
-      "app": "DIE APP",
-      "business": "GESCHÄFTSLÖSUNGEN",
-      "about": "ÜBER UNS",
-      "foodWaste": "Über Lebensmittelverschwendung",
-      "downloadApp": "APP HERUNTERLADEN",
-      "registerBusiness": "REGISTRIEREN SIE IHR UNTERNEHMEN",
-      "myStore": "MyStore Zugang"
+      "signUp": "Loslegen"
     },
     "home": {
       "meta": {
@@ -142,13 +201,9 @@
       },
       "hero": {
         "announcement": "Lesen Sie unser neuestes Technologie-Update",
-        "title": "RETTE GUTES ESSEN VOR DER VERSCHWENDUNG",
-        "subtitle": "Unsere App ist der größte Marktplatz zum Retten von überschüssigen Lebensmitteln. Wir helfen Nutzern, die Verschwendung von guten Lebensmitteln zu vermeiden und bieten ihnen ein ausgezeichnetes Preis-Leistungs-Verhältnis in lokalen Geschäften, Cafés und Restaurants.",
-        "cta": "Lass uns jetzt anfangen!",
-        "location": "Standort",
-        "date": "Abholdatum",
-        "search": "ÜBERRASCHUNGSPAKETE SUCHEN",
-        "results": "Ergebnisse in der Nähe:"
+        "title": "Wir starten Ihre Idee heute, um die Zukunft von morgen zu gestalten.",
+        "subtitle": "Trau dich zu testen, zu iterieren und zu erobern.",
+        "cta": "Lass uns jetzt anfangen!"
       },
       "cases": {
         "title": "Vertrauenswürdig für Unternehmen und Unternehmer",
@@ -161,54 +216,62 @@
         }
       },
       "features": {
-        "title": "WARUM GANGAÑAM NUTZEN",
-        "description": "Werde Teil der Gemeinschaft, die Lebensmittelverschwendung bekämpft und gleichzeitig qualitativ hochwertige Lebensmittel zu reduzierten Preisen genießt",
+        "title": "Warum uns wählen?",
+        "description": "Wir kombinieren modernste Technologie mit agilen Methoden, um außergewöhnliche Lösungen zu liefern",
         "items": [
           {
-            "title": "Genieße gutes Essen für die Hälfte des Originalpreises",
-            "description": "Spare Geld und genieße hochwertiges Essen von deinen Lieblingsgeschäften vor Ort."
+            "title": "Maßgeschneiderte Entwicklung",
+            "description": "Wir entwickeln maßgeschneiderte Lösungen, die perfekt zu Ihren einzigartigen Geschäftsanforderungen und -zielen passen."
           },
           {
-            "title": "Rette Lebensmittel in deiner Nähe",
-            "description": "Entdecke und rette überschüssige Lebensmittel aus Restaurants, Cafés, Bäckereien und Supermärkten in deiner Umgebung."
+            "title": "Web-Anwendungen",
+            "description": "Moderne, responsive Web-Anwendungen, die auf allen Geräten außergewöhnliche Benutzererlebnisse bieten."
           },
           {
-            "title": "Hilf der Umwelt",
-            "description": "Reduziere Lebensmittelverschwendung und trage zum Kampf gegen den Klimawandel bei."
+            "title": "UI/UX Design",
+            "description": "Intuitive Schnittstellen und ansprechende Benutzererlebnisse, die Ihre Kunden immer wieder zurückkehren lassen."
           },
           {
-            "title": "Probiere neue Cafés und Restaurants",
-            "description": "Entdecke neue lokale Geschäfte und leiste gleichzeitig einen Beitrag zu einer guten Sache."
+            "title": "Datenintegration",
+            "description": "Nahtlose Integration mit bestehenden Systemen und Drittanbieterdiensten, um das Potenzial Ihrer Daten zu maximieren."
           },
           {
-            "title": "Schnelle und einfache Abholung",
-            "description": "Hole dein Essen zur festgelegten Zeit ab, indem du einfach deinen Beleg in der App vorweist."
+            "title": "Agile Entwicklung",
+            "description": "Iterativer Ansatz, der die schnelle Bereitstellung wertvoller Funktionen und kontinuierliche Verbesserung gewährleistet."
           },
           {
-            "title": "Überraschungspaket zum guten Preis",
-            "description": "Erhalte eine Überraschungsauswahl an Produkten zu einem deutlich niedrigeren Preis als ihrem Originalwert."
+            "title": "Fortlaufender Support",
+            "description": "Zuverlässige Wartung und Unterstützung, um sicherzustellen, dass Ihre Lösung weiterhin optimal funktioniert."
           }
         ]
       },
       "stats": {
-        "title": "WIE MAN DIE APP BENUTZT",
-        "description": "Folge diesen einfachen Schritten, um mit Gangañam Lebensmittel zu retten",
+        "title": "Unser Prozess",
+        "description": "Wir folgen einer bewährten Methodik, um erfolgreiche Projekte zu liefern",
         "process": [
           {
-            "title": "Entdecke Überraschungspakete",
-            "description": "Finde verfügbare Überraschungspakete in Geschäften und Restaurants in deiner Nähe."
+            "title": "Entdeckung",
+            "description": "Wir beginnen damit, Ihre Geschäftsanforderungen, Zielgruppe und Ziele zu verstehen, um einen klaren Projektfahrplan zu erstellen."
           },
           {
-            "title": "Reservieren und bezahlen",
-            "description": "Reserviere dein Essen und bezahle sicher und schnell über die App."
+            "title": "Design",
+            "description": "Unser Kreativteam entwirft intuitive Schnittstellen und Benutzererlebnisse, die mit Ihrer Markenidentität und Ihren Zielen übereinstimmen."
           },
           {
-            "title": "Hole dein Essen ab",
-            "description": "Gehe zum angegebenen Abholzeitpunkt zum Geschäft und zeige deine Quittung in der App vor."
+            "title": "Entwicklung",
+            "description": "Mit agiler Methodik entwickeln wir Ihre Lösung iterativ und gewährleisten Qualität in jeder Phase des Entwicklungsprozesses."
           },
           {
-            "title": "Genieße dein Essen!",
-            "description": "Genieße dein Essen und sei stolz darauf, etwas Gutes für den Planeten getan zu haben."
+            "title": "Testen",
+            "description": "Umfassende Tests garantieren, dass Ihre Lösung auf allen Geräten und in allen Szenarien einwandfrei funktioniert."
+          },
+          {
+            "title": "Bereitstellung",
+            "description": "Wir starten Ihr Projekt sorgfältig und bieten Schulungen an, um einen reibungslosen Übergang und eine problemlose Einführung zu gewährleisten."
+          },
+          {
+            "title": "Support",
+            "description": "Unsere Beziehung wird durch kontinuierliche Wartung, Updates und Verbesserungen fortgesetzt, um Ihre Lösung optimal zu halten."
           }
         ]
       },

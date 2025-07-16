@@ -32,16 +32,16 @@ const Home = async ({ params }: HomeProps) => {
   return (
     <>
       {betaFeature && (
-        <div className="w-full bg-[#0d4b3d] py-2 text-center text-white">
-          ¡SALVA BUENA COMIDA DEL DESPERDICIO!
+        <div className="w-full bg-primary py-2 text-center text-white">
+          ¡Nueva plataforma de préstamos personales!
         </div>
       )}
       <Hero dictionary={dictionary} />
       <Features dictionary={dictionary} />
       <Stats dictionary={dictionary} />
       <Testimonials dictionary={dictionary} />
-      <CTA dictionary={dictionary} locale={locale} />
-      <FAQ dictionary={dictionary} locale={locale} />
+      <CTA dictionary={dictionary} />
+      <FAQ dictionary={dictionary} />
     </>
   );
 };
