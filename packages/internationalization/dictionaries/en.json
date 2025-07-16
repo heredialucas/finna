@@ -200,9 +200,14 @@
       },
       "hero": {
         "announcement": "New digital loan platform!",
-        "title": "Personal loans tailored to your needs",
+        "title": "Personal loans tailored to your needs",        
         "subtitle": "Get an instant quote and receive the money in less than 24 hours.",
         "cta": "Apply now!",
+        "dolarOficial": "Official Dollar",
+        "dolarBlue": "Blue Dollar",
+        "compra": "Purchase",
+        "venta": "Sale",
+        "actualizado": "Updated",
         "calculator": {
           "title": "Calculate your loan",
           "amount": "Loan amount",

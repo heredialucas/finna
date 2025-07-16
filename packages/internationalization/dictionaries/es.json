@@ -203,6 +203,11 @@
         "title": "Préstamos personales a tu medida",
         "subtitle": "Cotiza tu préstamo al instante y recibe el dinero en menos de 24 horas.",
         "cta": "¡Solicita ahora!",
+        "dolarOficial": "Dólar Oficial",
+        "dolarBlue": "Dólar Blue",
+        "compra": "Compra",
+        "venta": "Venta",
+        "actualizado": "Actualizado",
         "calculator": {
           "title": "Calcula tu préstamo",
           "amount": "Monto del préstamo",
@@ -255,7 +260,7 @@
       },
       "stats": {
         "title": "Nuestro Proceso",
-        "description": "Obtén tu préstamo en 3 simples pasos",
+        "description": "Obtené tu préstamo en 3 simples pasos",
         "process": [
           {
             "title": "Cotización",
@@ -335,7 +340,7 @@
         ]
       },
       "cta": {
-        "title": "Obtén el dinero que necesitas hoy mismo",
+        "title": "Obtené el dinero que necesitas hoy mismo",
         "description": "Únete a miles de personas que ya han solucionado sus necesidades financieras con Finna. Proceso 100% digital, respuesta inmediata y los mejores términos del mercado.",
         "calendly": {
           "title": "Habla con un asesor",

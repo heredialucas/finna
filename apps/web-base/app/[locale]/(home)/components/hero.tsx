@@ -4,13 +4,10 @@ import type { Dictionary } from '@repo/internationalization';
 import Link from 'next/link';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import dynamic from 'next/dynamic';
-import { useState, useEffect } from 'react';
-import animation_focus from '@/public/focus.json';
+import { useState } from 'react';
 import logo from '@/public/logo.png';
-import { staggerContainer, fadeIn, slideIn } from '../lib/animations';
-
-const Lottie = dynamic(() => import('lottie-react'), { ssr: false });
+import { staggerContainer, fadeIn, slideIn } from '@/animations/animations';
+// Eliminar import de getDolarRates y DolarRate
 
 type HeroProps = {
   dictionary: Dictionary;
@@ -25,10 +22,12 @@ export let savedLoanData = {
   totalPayment: 0
 };
 
-export const Hero = ({ dictionary }: HeroProps) => {
+// El Hero normal ahora es un Client Component puro
+export const Hero = ({ dictionary, oficial, blue, error }: HeroProps & { oficial?: any, blue?: any, error?: string }) => {
   const [loanAmount, setLoanAmount] = useState(5000);
   const [loanTerm, setLoanTerm] = useState(12);
-  const [interestRate, setInterestRate] = useState(24);
+  // Eliminar interestRate del estado y fijar tasa anual
+  const interestRate = 180; // 180% anual (15% mensual)
   const [monthlyPayment, setMonthlyPayment] = useState(0);
   const [totalPayment, setTotalPayment] = useState(0);
   const [hasCalculated, setHasCalculated] = useState(false);
@@ -52,11 +51,10 @@ export const Hero = ({ dictionary }: HeroProps) => {
     };
   };
 
-  // Create WhatsApp message with loan details
+  // Create WhatsApp message with loan details y cálculo real
   const getWhatsAppMessage = () => {
     if (!hasCalculated) return "Hola, quiero solicitar un préstamo con Finna";
-
-    return `Hola, quiero solicitar un préstamo con Finna por $${loanAmount} a ${loanTerm} meses. Mi cotización muestra una cuota mensual de $${monthlyPayment.toFixed(2)}. ¿Podrían ayudarme con el trámite?`;
+    return `Hola, quiero solicitar un préstamo con Finna por $${loanAmount} a ${loanTerm} meses. El cálculo en la web me da una cuota mensual de $${monthlyPayment.toFixed(2)} y un total a pagar de $${totalPayment.toFixed(2)}. ¿Me podrías ayudar con el trámite por favor?`;
   };
 
   return (
@@ -67,6 +65,53 @@ export const Hero = ({ dictionary }: HeroProps) => {
       className="min-h-[calc(100vh-4rem)] flex items-center relative px-4"
       id="inicio"
     >
+      {/* Cards de cotización dólar */}
+      <div className="absolute top-4 left-1/2 -translate-x-1/2 flex gap-4 z-20">
+        <div className="bg-white dark:bg-gray-800 rounded-lg p-4 shadow border border-green-200 dark:border-green-900 min-w-[180px]">
+          <div className="font-bold text-green-600 dark:text-green-400 text-lg">
+            {dictionary.web.home.hero.dolarOficial || 'Dólar Oficial'}
+          </div>
+          {oficial ? (
+            <>
+              <div className="flex justify-between text-sm mt-2">
+                <span>{dictionary.web.home.hero.compra || 'Compra'}:</span>
+                <span className="font-semibold">${oficial.compra}</span>
+              </div>
+              <div className="flex justify-between text-sm">
+                <span>{dictionary.web.home.hero.venta || 'Venta'}:</span>
+                <span className="font-semibold">${oficial.venta}</span>
+              </div>
+              <div className="text-xs text-gray-500 mt-1">
+                {dictionary.web.home.hero.actualizado || 'Actualizado'}: {new Date(oficial.fechaActualizacion).toLocaleString('es-AR')}
+              </div>
+            </>
+          ) : (
+            <div className="text-red-500 text-xs mt-2">{error || 'No disponible'}</div>
+          )}
+        </div>
+        <div className="bg-white dark:bg-gray-800 rounded-lg p-4 shadow border border-green-200 dark:border-green-900 min-w-[180px]">
+          <div className="font-bold text-blue-600 dark:text-blue-400 text-lg">
+            {dictionary.web.home.hero.dolarBlue || 'Dólar Blue'}
+          </div>
+          {blue ? (
+            <>
+              <div className="flex justify-between text-sm mt-2">
+                <span>{dictionary.web.home.hero.compra || 'Compra'}:</span>
+                <span className="font-semibold">${blue.compra}</span>
+              </div>
+              <div className="flex justify-between text-sm">
+                <span>{dictionary.web.home.hero.venta || 'Venta'}:</span>
+                <span className="font-semibold">${blue.venta}</span>
+              </div>
+              <div className="text-xs text-gray-500 mt-1">
+                {dictionary.web.home.hero.actualizado || 'Actualizado'}: {new Date(blue.fechaActualizacion).toLocaleString('es-AR')}
+              </div>
+            </>
+          ) : (
+            <div className="text-red-500 text-xs mt-2">{error || 'No disponible'}</div>
+          )}
+        </div>
+      </div>
       {/* Decorative elements specific to the hero */}
       <div className="absolute -top-10 right-1/4 w-20 h-20 bg-green-500/20 dark:bg-green-500/10 rounded-full blur-xl"></div>
       <div className="absolute bottom-10 left-1/3 w-32 h-32 bg-green-600/10 dark:bg-green-600/5 rounded-full blur-2xl"></div>
@@ -136,27 +181,10 @@ export const Hero = ({ dictionary }: HeroProps) => {
                   onChange={(e) => setLoanTerm(Number(e.target.value))}
                   className="w-full border border-green-200 dark:border-green-700 rounded-md p-2 focus:outline-none focus:ring-1 focus:ring-green-500 dark:bg-gray-700 dark:text-white"
                 >
+                  <option value="3">3</option>
                   <option value="6">6</option>
                   <option value="12">12</option>
-                  <option value="18">18</option>
-                  <option value="24">24</option>
-                  <option value="36">36</option>
                 </select>
-              </div>
-              <div>
-                <label className="block text-sm font-medium mb-1">{dictionary.web.home.hero.calculator.rate}</label>
-                <div className="flex items-center">
-                  <input
-                    type="number"
-                    value={interestRate}
-                    onChange={(e) => setInterestRate(Number(e.target.value))}
-                    className="flex-grow border border-green-200 dark:border-green-700 rounded-l-md p-2 focus:outline-none focus:ring-1 focus:ring-green-500 dark:bg-gray-700 dark:text-white"
-                    min="5"
-                    max="40"
-                    step="0.5"
-                  />
-                  <span className="bg-green-100 dark:bg-green-900 px-3 py-2 rounded-r-md text-green-600 dark:text-green-400 font-medium">%</span>
-                </div>
               </div>
               <button
                 onClick={calculateLoan}

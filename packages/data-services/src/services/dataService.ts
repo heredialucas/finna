@@ -175,4 +175,45 @@ export async function deleteData(dataId: string) {
         console.error("Error deleting data:", error);
         throw new Error("Failed to delete data");
     }
+}
+
+/**
+ * Obtener cotización del dólar oficial y blue desde dolarapi.com
+ * @returns {Promise<{ oficial: DolarRate | null, blue: DolarRate | null, error?: string }>}
+ */
+export type DolarRate = {
+    compra: number;
+    venta: number;
+    nombre: string;
+    fechaActualizacion: string;
+};
+
+export async function getDolarRates() {
+    try {
+        const [oficialRes, blueRes] = await Promise.all([
+            fetch('https://dolarapi.com/v1/dolares/oficial'),
+            fetch('https://dolarapi.com/v1/dolares/blue')
+        ]);
+        if (!oficialRes.ok || !blueRes.ok) {
+            return { oficial: null, blue: null, error: 'No se pudo obtener la cotización del dólar' };
+        }
+        const oficial = await oficialRes.json();
+        const blue = await blueRes.json();
+        return {
+            oficial: {
+                compra: oficial.compra,
+                venta: oficial.venta,
+                nombre: oficial.nombre,
+                fechaActualizacion: oficial.fechaActualizacion
+            },
+            blue: {
+                compra: blue.compra,
+                venta: blue.venta,
+                nombre: blue.nombre,
+                fechaActualizacion: blue.fechaActualizacion
+            }
+        };
+    } catch (error) {
+        return { oficial: null, blue: null, error: 'Error al obtener cotización del dólar' };
+    }
 } 

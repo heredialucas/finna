@@ -2,12 +2,12 @@ import { showBetaFeature } from '@repo/feature-flags';
 import { getDictionary } from '@repo/internationalization';
 import { createMetadata } from '@repo/seo/metadata';
 import type { Metadata } from 'next';
-import { Hero } from './components/hero';
 import { CTA } from './components/cta';
 import { FAQ } from './components/faq';
 import { Features } from './components/features';
 import { Stats } from './components/stats';
 import { Testimonials } from './components/testimonials';
+import { HeroServer } from './components/heroServer';
 
 type HomeProps = {
   params: Promise<{
@@ -36,7 +36,7 @@ const Home = async ({ params }: HomeProps) => {
           ¡Nueva plataforma de préstamos personales!
         </div>
       )}
-      <Hero dictionary={dictionary} />
+      <HeroServer dictionary={dictionary} />
       <Features dictionary={dictionary} />
       <Stats dictionary={dictionary} />
       <Testimonials dictionary={dictionary} />
