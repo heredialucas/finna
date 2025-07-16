@@ -13,7 +13,7 @@ export default function AccessDeniedLayout({ children }: AccessDeniedLayoutProps
                 <div className="container mx-auto">
                     <Link href="/" className="flex items-center gap-2">
                         <ShieldAlert className="h-5 w-5 text-blue-500" />
-                        <span className="font-bold text-lg">Repartito</span>
+                        <span className="font-bold text-lg">Finna</span>
                     </Link>
                 </div>
             </header>

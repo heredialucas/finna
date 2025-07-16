@@ -25,7 +25,7 @@ interface UserHeaderClientProps {
     locale?: string;
 }
 
-export function UserHeaderClient({ logo, title = 'Repartito', extraItems, dictionary, user, locale }: UserHeaderClientProps) {
+export function UserHeaderClient({ logo, title = 'Finna', extraItems, dictionary, user, locale }: UserHeaderClientProps) {
     const { isCollapsed, toggleCollapse } = useSidebar();
     const [isLogoAreaHovered, setLogoAreaHovered] = useState(false);
 

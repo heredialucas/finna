@@ -12,5 +12,5 @@ type User = {
 
 export async function UserHeaderServer() {
     const user = await getCurrentUser();
-    return <UserHeaderClient user={user as User} logo={<Image src={logo} alt="Repartito" width={130} height={130} />} />;
+    return <UserHeaderClient user={user as User} logo={<Image src={logo} alt="Finna" width={130} height={130} />} />;
 }

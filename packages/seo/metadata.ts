@@ -14,14 +14,14 @@ type CreateMetadataParams = {
   images: string[];
 };
 
-const applicationName = 'Repartito';
+const applicationName = 'Finna';
 const authors = [{
-  name: 'Repartito',
-  url: 'https://repartito.app/',
+  name: 'Finna',
+  url: 'https://blogui.me/heredialucas',
 }];
 const creator = 'Lucas Heredia';
-const publisher = 'Repartito';
-const twitterHandle = '@repartito';
+const publisher = 'Finna';
+const twitterHandle = '@finna';
 
 export const createMetadata = ({
   title,

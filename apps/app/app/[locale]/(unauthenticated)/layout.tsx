@@ -11,7 +11,7 @@ const AuthLayout = async ({ children }: AuthLayoutProps) => {
     <div className="bg-gray-50 dark:bg-zinc-900 min-h-screen flex items-center justify-center">
       <div className="container mx-auto flex flex-col items-center justify-center p-4">
         {/* Logo Section */}
-        <Image src={logo} alt="Repartito" width={228} height={228} className="mx-auto" />
+        <Image src={logo} alt="Finna" width={228} height={228} className="mx-auto" />
 
         {/* Form Card */}
         <div className="w-full max-w-md bg-white dark:bg-zinc-950/50 p-8 rounded-xl shadow-lg border border-gray-200 dark:border-zinc-800">
