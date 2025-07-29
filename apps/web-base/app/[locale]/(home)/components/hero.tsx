@@ -181,7 +181,7 @@ export const Hero = ({ dictionary, oficial, blue, error }: HeroProps & { oficial
             {/* Servicios que ofrecemos como items destacados */}
             {ServiciosItems}
             <div className="flex justify-center sm:justify-start">
-              <Link href={`https://wa.me/5493816437968?text=${encodeURIComponent(getWhatsAppMessage())}`} target="_blank">
+              <Link href={`https://wa.me/5493813276300?text=${encodeURIComponent(getWhatsAppMessage())}`} target="_blank">
                 <motion.button
                   className="bg-green-600 text-white px-6 sm:px-8 py-2 sm:py-3 rounded-lg font-medium hover:bg-green-700 transition-all shadow-lg text-base sm:text-lg mt-6"
                   whileHover={{ scale: 1.05 }}
@@ -245,7 +245,7 @@ export const Hero = ({ dictionary, oficial, blue, error }: HeroProps & { oficial
                   </div>
                   <div className="mt-4">
                     <Link
-                      href={`https://wa.me/5493816437968?text=${encodeURIComponent(getWhatsAppMessage())}`}
+                      href={`https://wa.me/5493813276300?text=${encodeURIComponent(getWhatsAppMessage())}`}
                       target="_blank"
                       className="block w-full bg-green-600 text-white text-center py-2 rounded-md hover:bg-green-700 transition-all font-medium shadow-md"
                     >

@@ -233,16 +233,16 @@ export const Footer = ({ dictionary }: FooterProps) => {
               <li className="flex items-center gap-3 justify-center md:justify-start">
                 <Phone className="w-4 h-4 text-green-500" />
                 <a
-                  href="https://wa.me/5493816437968"
+                  href="https://wa.me/5493813276300"
                   target="_blank"
                   className="text-gray-600 dark:text-gray-300 hover:text-green-600 dark:hover:text-green-400 transition-colors"
                 >
-                  +54 9 3541 28-6481
+                  +54 9 3813 27-6300
                 </a>
               </li>
               <li className="mt-4">
                 <Link
-                  href={`https://wa.me/5493816437968?text=${encodeURIComponent(getWhatsAppMessage())}`}
+                  href={`https://wa.me/5493813276300?text=${encodeURIComponent(getWhatsAppMessage())}`}
                   target="_blank"
                   className="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg transition-colors inline-block"
                 >

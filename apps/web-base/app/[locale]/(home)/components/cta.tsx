@@ -84,7 +84,7 @@ export const CTA = ({ dictionary }: CTAProps) => {
               </div>
 
               <Link
-                href={`https://wa.me/5493816437968?text=${encodeURIComponent(getWhatsAppMessage())}`}
+                href={`https://wa.me/5493813276300?text=${encodeURIComponent(getWhatsAppMessage())}`}
                 target="_blank"
                 className="w-full mt-8 bg-green-600 hover:bg-green-700 text-white flex items-center justify-center gap-2 py-4 rounded-lg font-medium transition-all shadow-lg text-center"
               >

@@ -65,7 +65,7 @@ export const FAQ = ({ dictionary }: FAQProps) => {
               {dictionary.web.home.faq.contactDescription}
             </p>
             <Button className="gap-2 bg-green-600 hover:bg-green-700 text-white shadow-md" asChild>
-              <Link href={`https://wa.me/5493816437968?text=${encodeURIComponent(getWhatsAppMessage())}`} target="_blank">
+              <Link href={`https://wa.me/5493813276300?text=${encodeURIComponent(getWhatsAppMessage())}`} target="_blank">
                 {dictionary.web.home.faq.cta}{' '}
                 <MessageCircle className="h-4 w-4" />
               </Link>

@@ -95,7 +95,7 @@ export const Header = ({ dictionary, locale }: HeaderProps) => {
             </Button>
           </div>
           <Button className="bg-green-600 hover:bg-green-700 text-white font-nunito font-bold px-3 py-1 h-9" asChild>
-            <Link href="https://wa.me/5493816437968?text=Hola, quiero solicitar un préstamo con Finna" target="_blank">
+            <Link href="https://wa.me/5493813276300?text=Hola, quiero solicitar un préstamo con Finna" target="_blank">
               {dictionary.web.global.primaryCta}
             </Link>
           </Button>
@@ -125,7 +125,7 @@ export const Header = ({ dictionary, locale }: HeaderProps) => {
             ))}
             <div className="px-4">
               <Link
-                href="https://wa.me/5493816437968?text=Hola, quiero solicitar un préstamo con Finna"
+                href="https://wa.me/5493813276300?text=Hola, quiero solicitar un préstamo con Finna"
                 target="_blank"
                 className="flex items-center justify-between font-nunito font-bold text-green-600"
                 onClick={() => setOpen(false)}
