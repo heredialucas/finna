@@ -146,17 +146,17 @@ export const Hero = ({ dictionary, oficial, blue, error }: HeroProps & { oficial
       initial="initial"
       animate="animate"
       variants={staggerContainer}
-      className="min-h-[calc(100vh-4rem)] flex items-center relative px-2 sm:px-4"
+      className="min-h-[calc(100vh-4rem)] flex flex-col justify-center relative px-2 sm:px-4 py-8"
       id="inicio"
     >
-      {/* Cards arriba solo en desktop */}
-      <div className="hidden sm:block w-full absolute top-4 left-0">{DolarCards}</div>
+      {/* Cards arriba solo en desktop - ahora ocupan espacio */}
+      <div className="hidden sm:block w-full mb-8">{DolarCards}</div>
       {/* Decorative elements specific to the hero */}
       <div className="absolute -top-10 right-1/4 w-20 h-20 bg-green-500/20 dark:bg-green-500/10 rounded-full blur-xl"></div>
       <div className="absolute bottom-10 left-1/3 w-32 h-32 bg-green-600/10 dark:bg-green-600/5 rounded-full blur-2xl"></div>
 
-      <div className="container mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 items-center">
+      <div className="container mx-auto flex-1 flex items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 items-center w-full">
           <motion.div variants={slideIn} className="pt-4 md:pt-0">
             <motion.div
               className="flex items-center gap-3 mb-6"
